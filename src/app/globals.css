@@ -33,7 +33,7 @@
 }
 
 body {
-  font-family: var(--font-body), 'DM Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   background: var(--paper);
   color: var(--ink);
   line-height: 1.6;
@@ -41,7 +41,7 @@ body {
 }
 
 h1, h2, h3, .section-title, .logo, .trust-stat .num {
-  font-family: var(--font-heading), 'DM Serif Display', serif;
+  font-family: 'DM Serif Display', serif;
 }
 
 /* ─── NAV ─── */
