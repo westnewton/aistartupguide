@@ -25,6 +25,38 @@ const SHORT_LABELS: Record<string, string> = {
   'CRM & Client Management Tools': 'CRM & Clients',
   'Market Analysis & Pricing Tools': 'Market Analysis',
   'Transaction & Operations Tools': 'Transactions & Ops',
+  // Professional Services
+  'Document & Contract Tools': 'Documents & Contracts',
+  'Time Tracking & Billing Tools': 'Time & Billing',
+  'Communication & Scheduling Tools': 'Communication',
+  'Marketing & Business Development Tools': 'Marketing & Biz Dev',
+  'Research & Writing Tools': 'Research & Writing',
+  // Transportation & Logistics
+  'Fleet Management & GPS Tools': 'Fleet & GPS',
+  'Route Optimization & Dispatch Tools': 'Routes & Dispatch',
+  'Load Matching & Freight Tools': 'Load Matching',
+  'Compliance & Documentation Tools': 'Compliance & Docs',
+  'Marketing & Customer Communication Tools': 'Marketing & Comms',
+  // Retail & E-Commerce
+  'Inventory & Product Management Tools': 'Inventory & Products',
+  'E-Commerce & Online Store Tools': 'E-Commerce',
+  'Point of Sale & Checkout Tools': 'POS & Checkout',
+  'Marketing & Social Commerce Tools': 'Marketing & Social',
+  'Customer Service & Chat Tools': 'Customer Service',
+  'Analytics & Pricing Tools': 'Analytics & Pricing',
+  // Food & Restaurants
+  'Online Ordering & Delivery Tools': 'Ordering & Delivery',
+  'POS & Kitchen Management Tools': 'POS & Kitchen',
+  'Reservation & Table Management Tools': 'Reservations',
+  'Menu & Pricing Optimization Tools': 'Menu & Pricing',
+  'Staffing & Scheduling Tools': 'Staffing & Scheduling',
+  // Health & Wellness
+  'Appointment & Practice Management Tools': 'Practice Management',
+  'Patient Communication Tools': 'Patient Communication',
+  'Billing & Insurance Tools': 'Billing & Insurance',
+  'Telehealth & Virtual Care Tools': 'Telehealth',
+  'Marketing & Reputation Tools': 'Marketing & Reviews',
+  'Documentation & Records Tools': 'Documentation',
 };
 
 export default function JumpNav({ categories }: JumpNavProps) {

@@ -12,8 +12,8 @@ export default function GettingStarted({ tips }: GettingStartedProps) {
           <div className="gs-label">Getting Started</div>
           <h2 className="gs-title">New to AI? Here&apos;s where to start.</h2>
           <p className="gs-text">
-            You don&apos;t need to adopt everything at once. Most contractors see the
-            biggest impact from just one or two tools. Here&apos;s our recommended
+            You don&apos;t need to adopt everything at once. Most small businesses see
+            the biggest impact from just one or two tools. Here&apos;s our recommended
             approach.
           </p>
           <Link href="/guides/intro-to-ai-for-small-business" className="btn-primary">

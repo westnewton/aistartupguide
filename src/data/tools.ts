@@ -85,8 +85,8 @@ export const tools: Tool[] = [
     description:
       'AI chatbot that lives on your website. Answers common questions (pricing, availability, service area), captures leads, and books appointments — even at 2 AM.',
     bestFor: ['All sizes', 'Lead capture'],
-    industries: ['construction-trades', 'home-personal-services', 'real-estate'],
-    categories: ['communication'],
+    industries: ['construction-trades', 'home-personal-services', 'real-estate', 'retail-ecommerce'],
+    categories: ['communication', 'customer-service'],
   },
   {
     name: 'Podium',
@@ -97,7 +97,7 @@ export const tools: Tool[] = [
     description:
       'AI-powered text messaging for local businesses. Automatically follows up with leads, requests Google reviews after jobs, and centralizes all conversations in one inbox.',
     bestFor: ['Review-driven', 'Local SEO'],
-    industries: ['construction-trades', 'home-personal-services', 'real-estate'],
+    industries: ['construction-trades', 'home-personal-services', 'real-estate', 'transportation-logistics', 'health-wellness'],
     categories: ['communication'],
   },
   {
@@ -122,7 +122,7 @@ export const tools: Tool[] = [
     description:
       'The industry standard, now with AI that auto-categorizes expenses, matches receipts, and flags unusual charges. Connects to your bank and most field service tools.',
     bestFor: ['All sizes', 'Bookkeeping'],
-    industries: ['construction-trades', 'home-personal-services'],
+    industries: ['construction-trades', 'home-personal-services', 'transportation-logistics', 'health-wellness'],
     categories: ['invoicing'],
   },
   {
@@ -146,8 +146,8 @@ export const tools: Tool[] = [
     description:
       'Simpler than QuickBooks with a cleaner interface. AI auto-generates invoices from time tracking, categorizes expenses from bank feeds, and sends smart payment reminders. Great middle ground.',
     bestFor: ['Small teams', 'Easy setup'],
-    industries: ['construction-trades', 'home-personal-services'],
-    categories: ['invoicing'],
+    industries: ['construction-trades', 'home-personal-services', 'professional-services', 'transportation-logistics'],
+    categories: ['invoicing', 'time-billing'],
   },
   // ═══ Marketing & Lead Generation ═══
   {
@@ -171,7 +171,7 @@ export const tools: Tool[] = [
     description:
       'Create professional social media posts, before/after graphics, and flyers in minutes. AI suggests layouts, writes captions, and resizes for every platform. No design skills needed.',
     bestFor: ['All sizes', 'Social media'],
-    industries: ['construction-trades', 'home-personal-services', 'real-estate'],
+    industries: ['construction-trades', 'home-personal-services', 'real-estate', 'retail-ecommerce', 'food-restaurants', 'health-wellness'],
     categories: ['marketing', 'listings'],
   },
   {
@@ -183,8 +183,8 @@ export const tools: Tool[] = [
     description:
       'The Swiss Army knife. Write job descriptions, social posts, email templates, ad copy, and customer responses in seconds. Free tier is surprisingly powerful for everyday marketing tasks.',
     bestFor: ['All sizes', 'Writing & content'],
-    industries: ['construction-trades', 'home-personal-services', 'real-estate'],
-    categories: ['marketing', 'listings'],
+    industries: ['construction-trades', 'home-personal-services', 'real-estate', 'professional-services', 'retail-ecommerce', 'food-restaurants', 'health-wellness'],
+    categories: ['marketing', 'listings', 'research', 'communication'],
   },
   // ═══ Project Documentation ═══
   {
@@ -284,7 +284,7 @@ export const tools: Tool[] = [
     description:
       'Free accounting and invoicing for small businesses. Send unlimited invoices, scan receipts, and track expenses \u2014 all without a monthly fee. AI categorizes transactions from bank connections.',
     bestFor: ['Solo operators', 'Budget-friendly'],
-    industries: ['home-personal-services'],
+    industries: ['home-personal-services', 'transportation-logistics'],
     categories: ['invoicing'],
   },
   {
@@ -296,8 +296,8 @@ export const tools: Tool[] = [
     description:
       'AI route optimization that saves hours of driving per week. Plan the fastest routes for multiple stops, track drivers in real time, and automatically adjust when jobs run long or get added mid-day.',
     bestFor: ['Mobile services', 'Route-heavy'],
-    industries: ['home-personal-services'],
-    categories: ['operations'],
+    industries: ['home-personal-services', 'transportation-logistics'],
+    categories: ['operations', 'route-optimization'],
   },
 
   // ═══════════════════════════════════════════════
@@ -467,9 +467,845 @@ export const tools: Tool[] = [
     rating: { score: 4.5, source: 'G2' },
     description:
       'The industry standard for e-signatures. Send contracts for signing from anywhere, track document status in real time, and store everything securely. AI assists with form field placement and agreement analysis.',
-    bestFor: ['All agents', 'E-signatures'],
-    industries: ['real-estate'],
-    categories: ['operations'],
+    bestFor: ['All sizes', 'E-signatures'],
+    industries: ['real-estate', 'professional-services'],
+    categories: ['operations', 'documents'],
+  },
+
+  // ═══════════════════════════════════════════════
+  // Professional Services — New Tools
+  // ═══════════════════════════════════════════════
+  {
+    name: 'Clio',
+    slug: 'clio',
+    url: 'https://www.clio.com',
+    pricing: { label: 'From $49/user/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'The top-rated practice management platform for law firms. AI organizes client matters, tracks deadlines, manages documents, and handles billing in one place. Used by 150K+ legal professionals.',
+    bestFor: ['Law firms', 'Solo attorneys'],
+    industries: ['professional-services'],
+    categories: ['crm', 'client-management'],
+  },
+  {
+    name: 'HubSpot CRM',
+    slug: 'hubspot-crm',
+    url: 'https://www.hubspot.com/crm',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.4, source: 'G2' },
+    description:
+      'Free CRM with AI-powered contact management, email tracking, and pipeline automation. Scales from solo consultants to mid-size firms without requiring a developer to set up.',
+    bestFor: ['Consultants', 'Growing firms'],
+    industries: ['professional-services'],
+    categories: ['crm', 'client-management'],
+  },
+  {
+    name: 'Salesforce Essentials',
+    slug: 'salesforce-essentials',
+    url: 'https://www.salesforce.com/solutions/essentials',
+    pricing: { label: 'From $25/user/mo', type: 'paid' },
+    rating: { score: 4.3, source: 'G2' },
+    description:
+      'Enterprise-grade CRM scaled down for small professional firms. AI scores leads, suggests next actions, and automates follow-ups. Powerful but has a steeper learning curve than HubSpot.',
+    bestFor: ['B2B services', 'Sales teams'],
+    industries: ['professional-services'],
+    categories: ['crm', 'client-management'],
+  },
+  {
+    name: 'PandaDoc',
+    slug: 'pandadoc',
+    url: 'https://www.pandadoc.com',
+    pricing: { label: 'Freemium', type: 'freemium' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'Create, send, and track proposals, contracts, and quotes in minutes. AI auto-fills client data, suggests content blocks, and analytics show exactly when clients open and read your documents.',
+    bestFor: ['Proposals & contracts', 'All firm sizes'],
+    industries: ['professional-services'],
+    categories: ['documents'],
+  },
+  {
+    name: 'Notion AI',
+    slug: 'notion-ai',
+    url: 'https://www.notion.so',
+    pricing: { label: 'Freemium', type: 'freemium' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'All-in-one workspace for docs, wikis, and project management. AI writes drafts, summarizes meeting notes, creates action items, and builds a searchable knowledge base for your entire firm.',
+    bestFor: ['Knowledge management', 'Team collaboration'],
+    industries: ['professional-services'],
+    categories: ['documents'],
+  },
+  {
+    name: 'Harvest',
+    slug: 'harvest',
+    url: 'https://www.getharvest.com',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.3, source: 'G2' },
+    description:
+      'Simple time tracking that turns hours into invoices. Start a timer, assign it to a project, and generate detailed reports for clients. Integrates with QuickBooks, Asana, and 70+ other tools.',
+    bestFor: ['Consultants', 'Hourly billing'],
+    industries: ['professional-services'],
+    categories: ['time-billing'],
+  },
+  {
+    name: 'Toggl Track',
+    slug: 'toggl-track',
+    url: 'https://toggl.com/track',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'One-click time tracking with AI that learns your habits. Automatically suggests time entries, detects idle time, and generates profitability reports by client or project. Free for up to 5 users.',
+    bestFor: ['Small teams', 'Project tracking'],
+    industries: ['professional-services'],
+    categories: ['time-billing'],
+  },
+  {
+    name: 'Bill4Time',
+    slug: 'bill4time',
+    url: 'https://www.bill4time.com',
+    pricing: { label: 'From $27/user/mo', type: 'paid' },
+    rating: { score: 4.8, source: 'Capterra' },
+    description:
+      'Time and billing built for legal and accounting professionals. Track billable hours, generate LEDES-format invoices, manage trust accounts, and run profitability reports by matter or client.',
+    bestFor: ['Law firms', 'Accountants'],
+    industries: ['professional-services'],
+    categories: ['time-billing'],
+  },
+  {
+    name: 'Calendly',
+    slug: 'calendly',
+    url: 'https://calendly.com',
+    pricing: { label: 'Freemium', type: 'freemium' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'Eliminate the back-and-forth of scheduling. Clients pick from your available times, get automatic reminders, and meetings sync to your calendar. AI suggests optimal meeting times based on your habits.',
+    bestFor: ['All sizes', 'Client meetings'],
+    industries: ['professional-services'],
+    categories: ['scheduling', 'communication'],
+  },
+  {
+    name: 'Zoom',
+    slug: 'zoom',
+    url: 'https://zoom.us',
+    pricing: { label: 'Freemium', type: 'freemium' },
+    rating: { score: 4.5, source: 'G2' },
+    description:
+      'Video meetings with AI-powered transcription, meeting summaries, and action item extraction. Record client calls, get searchable transcripts, and never miss a follow-up again.',
+    bestFor: ['All sizes', 'Remote meetings'],
+    industries: ['professional-services', 'health-wellness'],
+    categories: ['communication', 'telehealth'],
+  },
+  {
+    name: 'Loom',
+    slug: 'loom',
+    url: 'https://www.loom.com',
+    pricing: { label: 'Freemium', type: 'freemium' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'Record quick video messages instead of scheduling another meeting. AI generates transcripts, chapters, and summaries. Perfect for explaining complex deliverables or walking clients through reports.',
+    bestFor: ['Async communication', 'Client updates'],
+    industries: ['professional-services'],
+    categories: ['communication'],
+  },
+  {
+    name: 'LinkedIn Sales Navigator',
+    slug: 'linkedin-sales-nav',
+    url: 'https://business.linkedin.com/sales-solutions',
+    pricing: { label: 'From $99/mo', type: 'paid' },
+    rating: { score: 4.3, source: 'G2' },
+    description:
+      'AI-powered prospecting on the world\u2019s largest professional network. Get lead recommendations, track company news, and send InMails that land. The go-to tool for B2B business development.',
+    bestFor: ['B2B services', 'Business development'],
+    industries: ['professional-services'],
+    categories: ['marketing'],
+  },
+  {
+    name: 'Mailchimp',
+    slug: 'mailchimp',
+    url: 'https://mailchimp.com',
+    pricing: { label: 'Freemium', type: 'freemium' },
+    rating: { score: 4.3, source: 'G2' },
+    description:
+      'Email marketing with AI that writes subject lines, optimizes send times, and segments your audience. Free for up to 500 contacts. Automations handle welcome sequences, newsletters, and re-engagement.',
+    bestFor: ['Email marketing', 'All sizes'],
+    industries: ['professional-services', 'transportation-logistics', 'food-restaurants'],
+    categories: ['marketing'],
+  },
+  {
+    name: 'Jasper',
+    slug: 'jasper',
+    url: 'https://www.jasper.ai',
+    pricing: { label: 'From $39/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'AI writing assistant trained on marketing best practices. Generate blog posts, case studies, website copy, and thought leadership content on brand. Learns your firm\u2019s tone and terminology.',
+    bestFor: ['Content marketing', 'Growing firms'],
+    industries: ['professional-services'],
+    categories: ['research', 'marketing'],
+  },
+  {
+    name: 'Grammarly Business',
+    slug: 'grammarly-business',
+    url: 'https://www.grammarly.com/business',
+    pricing: { label: 'From $12/member/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'AI writing assistant that catches errors, improves clarity, and ensures consistent tone across your firm. Works in email, docs, and browsers. Keeps client-facing communication polished and professional.',
+    bestFor: ['All sizes', 'Client communication'],
+    industries: ['professional-services'],
+    categories: ['research'],
+  },
+
+  // ═══════════════════════════════════════════════
+  // Transportation & Logistics — New Tools
+  // ═══════════════════════════════════════════════
+  {
+    name: 'Samsara',
+    slug: 'samsara',
+    url: 'https://www.samsara.com',
+    pricing: { label: 'Custom pricing', type: 'paid' },
+    rating: { score: 4.5, source: 'G2' },
+    description:
+      'All-in-one fleet management with GPS tracking, AI dash cams, and ELD compliance. Monitors driver behavior, predicts maintenance needs, and provides real-time visibility across your entire fleet.',
+    bestFor: ['Fleets 10+', 'Full visibility'],
+    industries: ['transportation-logistics'],
+    categories: ['fleet-management', 'compliance'],
+  },
+  {
+    name: 'Verizon Connect',
+    slug: 'verizon-connect',
+    url: 'https://www.verizonconnect.com',
+    pricing: { label: 'Custom pricing', type: 'paid' },
+    rating: { score: 3.2, source: 'Capterra' },
+    description:
+      'Enterprise fleet tracking with AI-powered fuel optimization and driver scoring. Real-time GPS, geofencing alerts, and maintenance scheduling. Reliable but geared toward larger operations.',
+    bestFor: ['Mid-size fleets', 'Enterprise'],
+    industries: ['transportation-logistics'],
+    categories: ['fleet-management'],
+  },
+  {
+    name: 'GPS Trackit',
+    slug: 'gps-trackit',
+    url: 'https://gpstrackit.com',
+    pricing: { label: 'From $25/vehicle/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'Capterra' },
+    description:
+      'Affordable GPS tracking for small fleets. Real-time location, speed alerts, and trip history without the complexity of enterprise platforms. AI suggests route improvements based on driving patterns.',
+    bestFor: ['Small fleets', 'Budget-friendly'],
+    industries: ['transportation-logistics'],
+    categories: ['fleet-management'],
+  },
+  {
+    name: 'Route4Me',
+    slug: 'route4me',
+    url: 'https://www.route4me.com',
+    pricing: { label: 'From $40/mo', type: 'paid' },
+    rating: { score: 4.4, source: 'Capterra' },
+    description:
+      'AI route planning for delivery and service fleets. Upload your stops and get the fastest multi-stop routes in seconds. Accounts for traffic, time windows, and vehicle capacity automatically.',
+    bestFor: ['Delivery fleets', 'Multi-stop routes'],
+    industries: ['transportation-logistics'],
+    categories: ['route-optimization'],
+  },
+  {
+    name: 'Onfleet',
+    slug: 'onfleet',
+    url: 'https://onfleet.com',
+    pricing: { label: 'From $599/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'Last-mile delivery management with AI-optimized routing, real-time tracking, and automated customer notifications. Drivers get turn-by-turn directions while dispatchers see everything on a live map.',
+    bestFor: ['Last-mile delivery', 'Growing operations'],
+    industries: ['transportation-logistics'],
+    categories: ['route-optimization'],
+  },
+  {
+    name: 'DAT',
+    slug: 'dat',
+    url: 'https://www.dat.com',
+    pricing: { label: 'From $49/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'The largest load board in North America. AI matches available trucks with freight, provides rate estimates based on market data, and helps you negotiate fair prices. Essential for owner-operators and brokers.',
+    bestFor: ['Owner-operators', 'Freight brokers'],
+    industries: ['transportation-logistics'],
+    categories: ['load-matching'],
+  },
+  {
+    name: 'Loadsmart',
+    slug: 'loadsmart',
+    url: 'https://loadsmart.com',
+    pricing: { label: 'Free to use', type: 'free' },
+    rating: { score: 4.1, source: 'G2' },
+    description:
+      'AI-powered freight matching that instantly quotes and books loads. Algorithms predict pricing, optimize routes, and match carriers with shippers. No subscription \u2014 you only pay per load moved.',
+    bestFor: ['Shippers', 'Instant booking'],
+    industries: ['transportation-logistics'],
+    categories: ['load-matching'],
+  },
+  {
+    name: 'Truckstop',
+    slug: 'truckstop',
+    url: 'https://truckstop.com',
+    pricing: { label: 'From $39/mo', type: 'paid' },
+    rating: { score: 4.0, source: 'G2' },
+    description:
+      'Load board and freight management platform. AI-powered rate analysis helps you price loads competitively, and the credit check tool screens brokers before you haul. Trusted by 200K+ carriers.',
+    bestFor: ['Carriers', 'Rate research'],
+    industries: ['transportation-logistics'],
+    categories: ['load-matching'],
+  },
+  {
+    name: 'Motive',
+    slug: 'motive',
+    url: 'https://gomotive.com',
+    pricing: { label: 'From $25/vehicle/mo', type: 'paid' },
+    rating: { score: 4.4, source: 'G2' },
+    description:
+      'ELD compliance and fleet safety in one platform. AI-powered dash cams detect unsafe driving, automatic HOS logging keeps you DOT-compliant, and DVIR workflows simplify vehicle inspections.',
+    bestFor: ['ELD compliance', 'Safety-focused'],
+    industries: ['transportation-logistics'],
+    categories: ['compliance'],
+  },
+  {
+    name: 'EROAD',
+    slug: 'eroad',
+    url: 'https://www.eroad.com',
+    pricing: { label: 'From $25/vehicle/mo', type: 'paid' },
+    rating: { score: 4.5, source: 'Capterra' },
+    description:
+      'ELD and tax compliance built for trucking. Automates IFTA fuel tax reporting, HOS logging, and DVIR inspections. Simpler than Samsara or Motive \u2014 focused on keeping small fleets compliant without the extras.',
+    bestFor: ['Small fleets', 'IFTA compliance'],
+    industries: ['transportation-logistics'],
+    categories: ['compliance'],
+  },
+
+  // ═══════════════════════════════════════════════
+  // Retail & E-Commerce — New Tools
+  // ═══════════════════════════════════════════════
+  {
+    name: 'Cin7',
+    slug: 'cin7',
+    url: 'https://www.cin7.com',
+    pricing: { label: 'From $349/mo', type: 'paid' },
+    rating: { score: 4.3, source: 'Capterra' },
+    description:
+      'Inventory management that syncs stock across your store, warehouse, and online channels in real time. AI forecasts demand, automates reorders, and prevents stockouts before they happen.',
+    bestFor: ['Multi-channel', 'Growing retailers'],
+    industries: ['retail-ecommerce'],
+    categories: ['inventory'],
+  },
+  {
+    name: 'Sortly',
+    slug: 'sortly',
+    url: 'https://www.sortly.com',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.5, source: 'Capterra' },
+    description:
+      'Visual inventory tracking with barcode scanning from your phone. Snap photos of items, organize by category, set low-stock alerts, and generate reports. Simple enough for a single shop, powerful enough for multiple locations.',
+    bestFor: ['Small shops', 'Visual tracking'],
+    industries: ['retail-ecommerce'],
+    categories: ['inventory'],
+  },
+  {
+    name: 'inFlow',
+    slug: 'inflow',
+    url: 'https://www.inflowinventory.com',
+    pricing: { label: 'From $89/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'Capterra' },
+    description:
+      'Inventory and order management for small to mid-size retailers. Track products across locations, manage purchase orders, and generate barcodes. Integrates with Shopify, Amazon, and QuickBooks.',
+    bestFor: ['SMB retail', 'Order management'],
+    industries: ['retail-ecommerce'],
+    categories: ['inventory'],
+  },
+  {
+    name: 'Shopify',
+    slug: 'shopify',
+    url: 'https://www.shopify.com',
+    pricing: { label: 'From $39/mo', type: 'paid' },
+    rating: { score: 4.4, source: 'G2' },
+    description:
+      'The leading e-commerce platform with AI-powered product descriptions, automated marketing, and built-in analytics. Set up a professional online store in hours, not weeks. Handles payments, shipping, and tax automatically.',
+    bestFor: ['All sizes', 'Online selling'],
+    industries: ['retail-ecommerce'],
+    categories: ['ecommerce'],
+  },
+  {
+    name: 'BigCommerce',
+    slug: 'bigcommerce',
+    url: 'https://www.bigcommerce.com',
+    pricing: { label: 'From $39/mo', type: 'paid' },
+    rating: { score: 4.2, source: 'G2' },
+    description:
+      'Enterprise-grade e-commerce with no transaction fees. AI-powered product recommendations, multi-channel selling (Amazon, eBay, social), and advanced SEO tools built in. Better for catalog-heavy businesses.',
+    bestFor: ['Large catalogs', 'Multi-channel'],
+    industries: ['retail-ecommerce'],
+    categories: ['ecommerce'],
+  },
+  {
+    name: 'WooCommerce',
+    slug: 'woocommerce',
+    url: 'https://woocommerce.com',
+    pricing: { label: 'Free (open source)', type: 'free' },
+    rating: { score: 4.4, source: 'G2' },
+    description:
+      'Free WordPress plugin that turns any site into a full online store. Thousands of extensions for payments, shipping, and marketing. Requires more setup than Shopify but gives you total control and no monthly fees.',
+    bestFor: ['WordPress users', 'Budget-friendly'],
+    industries: ['retail-ecommerce'],
+    categories: ['ecommerce'],
+  },
+  {
+    name: 'Square POS',
+    slug: 'square-pos',
+    url: 'https://squareup.com',
+    pricing: { label: 'Free + transaction fees', type: 'freemium' },
+    rating: { score: 4.6, source: 'Capterra' },
+    description:
+      'Free point-of-sale system with built-in payments, inventory tracking, and customer profiles. AI provides sales insights, identifies your best sellers, and suggests optimal staffing levels based on traffic patterns.',
+    bestFor: ['All sizes', 'Easy setup'],
+    industries: ['retail-ecommerce'],
+    categories: ['pos'],
+  },
+  {
+    name: 'Lightspeed',
+    slug: 'lightspeed',
+    url: 'https://www.lightspeedhq.com',
+    pricing: { label: 'From $89/mo', type: 'paid' },
+    rating: { score: 4.0, source: 'G2' },
+    description:
+      'POS and inventory management for retail stores. AI-powered purchase ordering, multi-location stock transfers, and detailed analytics. Better for specialty retailers who need deep inventory control.',
+    bestFor: ['Specialty retail', 'Multi-location'],
+    industries: ['retail-ecommerce'],
+    categories: ['pos'],
+  },
+  {
+    name: 'Clover',
+    slug: 'clover',
+    url: 'https://www.clover.com',
+    pricing: { label: 'From $14.95/mo', type: 'paid' },
+    rating: { score: 3.9, source: 'G2' },
+    description:
+      'Flexible POS with a marketplace of 300+ apps. Customizable hardware, built-in loyalty programs, and employee management. Good middle ground between Square\u2019s simplicity and Lightspeed\u2019s depth.',
+    bestFor: ['Counter service', 'Customizable'],
+    industries: ['retail-ecommerce'],
+    categories: ['pos'],
+  },
+  {
+    name: 'Klaviyo',
+    slug: 'klaviyo',
+    url: 'https://www.klaviyo.com',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'Email and SMS marketing built for e-commerce. AI predicts customer lifetime value, segments shoppers by behavior, and automates abandoned cart recovery, post-purchase flows, and win-back campaigns.',
+    bestFor: ['E-commerce', 'Email & SMS'],
+    industries: ['retail-ecommerce'],
+    categories: ['marketing'],
+  },
+  {
+    name: 'Hootsuite',
+    slug: 'hootsuite',
+    url: 'https://www.hootsuite.com',
+    pricing: { label: 'From $99/mo', type: 'paid' },
+    rating: { score: 4.1, source: 'G2' },
+    description:
+      'Manage all your social media from one dashboard. AI suggests optimal posting times, writes captions, and monitors brand mentions. Schedule weeks of content in advance across Instagram, Facebook, TikTok, and more.',
+    bestFor: ['Multi-platform', 'Social scheduling'],
+    industries: ['retail-ecommerce'],
+    categories: ['marketing'],
+  },
+  {
+    name: 'Zendesk',
+    slug: 'zendesk',
+    url: 'https://www.zendesk.com',
+    pricing: { label: 'From $19/agent/mo', type: 'paid' },
+    rating: { score: 4.3, source: 'G2' },
+    description:
+      'Customer support platform with AI-powered ticket routing, automated responses, and a self-service knowledge base. Handles email, chat, phone, and social media inquiries from one unified inbox.',
+    bestFor: ['Growing teams', 'Multi-channel support'],
+    industries: ['retail-ecommerce'],
+    categories: ['customer-service'],
+  },
+  {
+    name: 'Gorgias',
+    slug: 'gorgias',
+    url: 'https://www.gorgias.com',
+    pricing: { label: 'From $10/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'Customer support built for e-commerce. AI auto-responds to common questions (order status, returns, shipping), pulls in Shopify order data, and prioritizes high-value tickets so VIP customers get faster service.',
+    bestFor: ['Shopify stores', 'E-commerce support'],
+    industries: ['retail-ecommerce'],
+    categories: ['customer-service'],
+  },
+  {
+    name: 'Google Analytics',
+    slug: 'google-analytics',
+    url: 'https://analytics.google.com',
+    pricing: { label: 'Free', type: 'free' },
+    rating: { score: 4.5, source: 'G2' },
+    description:
+      'Free website and e-commerce analytics from Google. AI-powered insights surface trends you\u2019d miss, predictive audiences find likely buyers, and conversion tracking shows exactly which marketing channels drive sales.',
+    bestFor: ['All sizes', 'Website analytics'],
+    industries: ['retail-ecommerce'],
+    categories: ['analytics'],
+  },
+  {
+    name: 'Prisync',
+    slug: 'prisync',
+    url: 'https://prisync.com',
+    pricing: { label: 'From $99/mo', type: 'paid' },
+    rating: { score: 4.8, source: 'Capterra' },
+    description:
+      'Automated competitor price tracking. AI monitors rival pricing across the web and suggests optimal price points to maximize margins while staying competitive. Set rules to auto-adjust pricing in real time.',
+    bestFor: ['Competitive markets', 'Dynamic pricing'],
+    industries: ['retail-ecommerce'],
+    categories: ['analytics'],
+  },
+  {
+    name: 'Triple Whale',
+    slug: 'triple-whale',
+    url: 'https://www.triplewhale.com',
+    pricing: { label: 'Freemium / from $129/mo', type: 'freemium' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'E-commerce analytics dashboard that shows true ad performance. AI-powered attribution tracks every dollar from ad click to purchase, measures real ROAS, and identifies your most profitable marketing channels.',
+    bestFor: ['DTC brands', 'Ad-heavy businesses'],
+    industries: ['retail-ecommerce'],
+    categories: ['analytics'],
+  },
+
+  // ═══════════════════════════════════════════════
+  // Food & Restaurants — New Tools
+  // ═══════════════════════════════════════════════
+  {
+    name: 'Toast',
+    slug: 'toast',
+    url: 'https://pos.toasttab.com',
+    pricing: { label: 'Free tier + fees', type: 'freemium' },
+    rating: { score: 4.5, source: 'G2' },
+    description:
+      'The restaurant industry\u2019s leading platform. POS, online ordering, kitchen display, payroll, and marketing in one system. AI optimizes menu layout, predicts busy periods, and automates inventory tracking.',
+    bestFor: ['Full-service restaurants', 'All-in-one'],
+    industries: ['food-restaurants'],
+    categories: ['online-ordering', 'pos-kitchen'],
+  },
+  {
+    name: 'ChowNow',
+    slug: 'chownow',
+    url: 'https://www.chownow.com',
+    pricing: { label: 'From $119/mo', type: 'paid' },
+    rating: { score: 4.8, source: 'Capterra' },
+    description:
+      'Commission-free online ordering for restaurants. Keep 100% of your revenue unlike DoorDash or Uber Eats. AI-powered marketing brings repeat orders, and your own branded app puts your restaurant on customers\u2019 home screens.',
+    bestFor: ['Independent restaurants', 'Commission-free'],
+    industries: ['food-restaurants'],
+    categories: ['online-ordering'],
+  },
+  {
+    name: 'Square Online',
+    slug: 'square-online',
+    url: 'https://squareup.com/us/en/online-store',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.3, source: 'G2' },
+    description:
+      'Free online ordering that syncs with Square POS. Customers order from your website for pickup or delivery. Menu updates sync automatically, and you get a simple delivery management dashboard.',
+    bestFor: ['Small restaurants', 'Budget-friendly'],
+    industries: ['food-restaurants'],
+    categories: ['online-ordering'],
+  },
+  {
+    name: 'Square for Restaurants',
+    slug: 'square-restaurants',
+    url: 'https://squareup.com/us/en/restaurants',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.2, source: 'G2' },
+    description:
+      'Restaurant POS with table management, kitchen tickets, and menu management. Free plan covers the basics. AI tracks your best and worst sellers, and coursing features keep the kitchen organized during rushes.',
+    bestFor: ['Small restaurants', 'Caf\u00e9s'],
+    industries: ['food-restaurants'],
+    categories: ['pos-kitchen'],
+  },
+  {
+    name: 'Lightspeed Restaurant',
+    slug: 'lightspeed-restaurant',
+    url: 'https://www.lightspeedhq.com/pos/restaurant',
+    pricing: { label: 'From $69/mo', type: 'paid' },
+    rating: { score: 4.5, source: 'G2' },
+    description:
+      'Advanced restaurant POS with floor plan management, kitchen display system, and real-time menu analytics. AI identifies high-margin items and suggests menu placement strategies to boost average ticket size.',
+    bestFor: ['Fine dining', 'Multi-location'],
+    industries: ['food-restaurants'],
+    categories: ['pos-kitchen'],
+  },
+  {
+    name: 'OpenTable',
+    slug: 'opentable',
+    url: 'https://restaurant.opentable.com',
+    pricing: { label: 'From $149/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'Capterra' },
+    description:
+      'The most recognized reservation platform. AI optimizes table assignments, predicts no-shows, and manages waitlists. Your restaurant gets exposure to millions of diners searching the OpenTable network.',
+    bestFor: ['Full-service', 'High volume'],
+    industries: ['food-restaurants'],
+    categories: ['reservations'],
+  },
+  {
+    name: 'Resy',
+    slug: 'resy',
+    url: 'https://resy.com',
+    pricing: { label: 'From $249/mo', type: 'paid' },
+    rating: { score: 4.5, source: 'Capterra' },
+    description:
+      'Premium reservation system favored by high-end restaurants. AI-powered table management, guest profiles with dining preferences, and CRM features that help you deliver personalized service to regulars.',
+    bestFor: ['Upscale dining', 'Guest experience'],
+    industries: ['food-restaurants'],
+    categories: ['reservations'],
+  },
+  {
+    name: 'Yelp Guest Manager',
+    slug: 'yelp-guest-manager',
+    url: 'https://restaurants.yelp.com',
+    pricing: { label: 'From $99/mo', type: 'paid' },
+    rating: { score: 4.5, source: 'Capterra' },
+    description:
+      'Waitlist and reservation management powered by Yelp\u2019s massive consumer network. Guests join your waitlist from Yelp, Google, or your website. AI predicts wait times accurately and sends automated text updates.',
+    bestFor: ['Walk-in heavy', 'Yelp presence'],
+    industries: ['food-restaurants'],
+    categories: ['reservations'],
+  },
+  {
+    name: 'MarketMan',
+    slug: 'marketman',
+    url: 'https://www.marketman.com',
+    pricing: { label: 'From $127/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'Capterra' },
+    description:
+      'Restaurant inventory and food cost management. AI tracks ingredient costs in real time, alerts you when food costs spike, auto-generates purchase orders, and calculates actual vs. theoretical food cost per dish.',
+    bestFor: ['Cost control', 'Multi-unit'],
+    industries: ['food-restaurants'],
+    categories: ['menu-pricing'],
+  },
+  {
+    name: 'BlueCart',
+    slug: 'bluecart',
+    url: 'https://www.bluecart.com',
+    pricing: { label: 'From $10/mo', type: 'paid' },
+    rating: { score: 4.1, source: 'Capterra' },
+    description:
+      'Streamline ordering from your suppliers. AI tracks purchase patterns, compares vendor pricing, and automates reorders when stock runs low. Consolidates all supplier communication in one platform.',
+    bestFor: ['Procurement', 'Multi-vendor'],
+    industries: ['food-restaurants'],
+    categories: ['menu-pricing'],
+  },
+  {
+    name: 'xtraCHEF',
+    slug: 'xtrachef',
+    url: 'https://xtrachef.com',
+    pricing: { label: 'Custom pricing', type: 'paid' },
+    rating: { score: 4.4, source: 'G2' },
+    description:
+      'AI-powered invoice processing and food cost analytics (now part of Toast). Snap a photo of supplier invoices and costs are automatically digitized, tracked, and compared against budget. Catches price hikes instantly.',
+    bestFor: ['Invoice automation', 'Cost analytics'],
+    industries: ['food-restaurants'],
+    categories: ['menu-pricing'],
+  },
+  {
+    name: 'Popmenu',
+    slug: 'popmenu',
+    url: 'https://get.popmenu.com',
+    pricing: { label: 'From $179/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'Restaurant marketing platform with AI-powered website, interactive menus, and automated social media posting. Guests can order directly from your menu, and AI writes personalized email campaigns based on dining history.',
+    bestFor: ['Marketing-focused', 'Independent restaurants'],
+    industries: ['food-restaurants'],
+    categories: ['marketing'],
+  },
+  {
+    name: '7shifts',
+    slug: '7shifts',
+    url: 'https://www.7shifts.com',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.7, source: 'Capterra' },
+    description:
+      'Restaurant scheduling built around labor compliance. AI predicts staffing needs based on sales forecasts, auto-fills shifts when someone calls out, and keeps you under budget with real-time labor cost tracking.',
+    bestFor: ['Restaurants', 'Labor compliance'],
+    industries: ['food-restaurants'],
+    categories: ['staffing'],
+  },
+  {
+    name: 'Homebase',
+    slug: 'homebase',
+    url: 'https://joinhomebase.com',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'Free employee scheduling, time tracking, and team communication. AI optimizes schedules based on availability and labor targets. Includes hiring tools, onboarding checklists, and basic HR features.',
+    bestFor: ['Small restaurants', 'Free scheduling'],
+    industries: ['food-restaurants'],
+    categories: ['staffing'],
+  },
+  {
+    name: 'When I Work',
+    slug: 'when-i-work',
+    url: 'https://wheniwork.com',
+    pricing: { label: 'From $2.50/user/mo', type: 'paid' },
+    rating: { score: 4.5, source: 'Capterra' },
+    description:
+      'Simple shift scheduling and time clock for hourly teams. Employees swap shifts from their phones, managers approve with one tap, and AI flags overtime before it happens. Clean interface with minimal learning curve.',
+    bestFor: ['Hourly teams', 'Easy setup'],
+    industries: ['food-restaurants'],
+    categories: ['staffing'],
+  },
+
+  // ═══════════════════════════════════════════════
+  // Health & Wellness — New Tools
+  // ═══════════════════════════════════════════════
+  {
+    name: 'Jane App',
+    slug: 'jane-app',
+    url: 'https://jane.app',
+    pricing: { label: 'From $54/mo', type: 'paid' },
+    rating: { score: 4.8, source: 'Capterra' },
+    description:
+      'Practice management for health and wellness clinics. Online booking, charting, billing, and telehealth in one platform. AI handles insurance verification, waitlist management, and appointment reminders.',
+    bestFor: ['Allied health', 'Clinics'],
+    industries: ['health-wellness'],
+    categories: ['practice-management'],
+  },
+  {
+    name: 'Mindbody',
+    slug: 'mindbody',
+    url: 'https://www.mindbody.io',
+    pricing: { label: 'From $99/mo', type: 'paid' },
+    rating: { score: 4.0, source: 'Capterra' },
+    description:
+      'The leading platform for fitness studios, gyms, and wellness businesses. AI-powered class scheduling, membership management, and a consumer marketplace that brings new clients to your door.',
+    bestFor: ['Fitness studios', 'Gyms'],
+    industries: ['health-wellness'],
+    categories: ['practice-management'],
+  },
+  {
+    name: 'SimplePractice',
+    slug: 'simplepractice',
+    url: 'https://www.simplepractice.com',
+    pricing: { label: 'From $49/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'Capterra' },
+    description:
+      'All-in-one practice management for therapists, counselors, and private practitioners. Online booking, HIPAA-compliant telehealth, insurance billing, and client documentation in a clean, intuitive interface.',
+    bestFor: ['Therapists', 'Private practice'],
+    industries: ['health-wellness'],
+    categories: ['practice-management', 'telehealth'],
+  },
+  {
+    name: 'Weave',
+    slug: 'weave',
+    url: 'https://www.getweave.com',
+    pricing: { label: 'From $249/mo', type: 'paid' },
+    rating: { score: 4.5, source: 'G2' },
+    description:
+      'Patient communication platform that shows who\u2019s calling before you pick up. AI sends appointment reminders, handles two-way texting, collects payments via text, and automates review requests after visits.',
+    bestFor: ['Dental & medical', 'Patient engagement'],
+    industries: ['health-wellness'],
+    categories: ['patient-communication'],
+  },
+  {
+    name: 'Klara',
+    slug: 'klara',
+    url: 'https://www.klara.com',
+    pricing: { label: 'Custom pricing', type: 'paid' },
+    rating: { score: 4.5, source: 'G2' },
+    description:
+      'HIPAA-compliant patient messaging and intake automation. AI routes patient inquiries to the right staff, digitizes intake forms, and handles appointment requests \u2014 so your front desk isn\u2019t buried in phone calls.',
+    bestFor: ['Medical practices', 'Intake automation'],
+    industries: ['health-wellness'],
+    categories: ['patient-communication'],
+  },
+  {
+    name: 'Tebra',
+    slug: 'tebra',
+    url: 'https://www.tebra.com',
+    pricing: { label: 'From $99/provider/mo', type: 'paid' },
+    rating: { score: 4.1, source: 'G2' },
+    description:
+      'Medical billing and practice management (formerly Kareo). AI automates claim submissions, flags coding errors before they\u2019re rejected, and tracks every dollar from appointment to payment. Built for independent practices.',
+    bestFor: ['Independent practices', 'Medical billing'],
+    industries: ['health-wellness'],
+    categories: ['billing-insurance'],
+  },
+  {
+    name: 'AthenaHealth',
+    slug: 'athenahealth',
+    url: 'https://www.athenahealth.com',
+    pricing: { label: 'Percentage of collections', type: 'paid' },
+    rating: { score: 3.8, source: 'Capterra' },
+    description:
+      'Cloud-based billing, EHR, and patient engagement. AI-powered claims management handles denials automatically, and the billing rules engine catches errors before submission. You only pay a percentage of what they collect.',
+    bestFor: ['Medical practices', 'Revenue cycle'],
+    industries: ['health-wellness'],
+    categories: ['billing-insurance'],
+  },
+  {
+    name: 'Doxy.me',
+    slug: 'doxyme',
+    url: 'https://doxy.me',
+    pricing: { label: 'Free tier', type: 'freemium' },
+    rating: { score: 4.6, source: 'G2' },
+    description:
+      'Free, HIPAA-compliant telehealth that works in any browser \u2014 no downloads for patients. Start a video visit with a simple link. Includes a virtual waiting room, screen sharing, and session notes.',
+    bestFor: ['All providers', 'Free telehealth'],
+    industries: ['health-wellness'],
+    categories: ['telehealth'],
+  },
+  {
+    name: 'Birdeye',
+    slug: 'birdeye',
+    url: 'https://www.birdeye.com',
+    pricing: { label: 'From $299/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'G2' },
+    description:
+      'Reputation management built for healthcare. AI generates review requests via text after visits, monitors 200+ review sites, and crafts HIPAA-compliant response suggestions for every review \u2014 good or bad.',
+    bestFor: ['Reputation management', 'Multi-location'],
+    industries: ['health-wellness'],
+    categories: ['marketing'],
+  },
+  {
+    name: 'DrChrono',
+    slug: 'drchrono',
+    url: 'https://www.drchrono.com',
+    pricing: { label: 'From $299/provider/mo', type: 'paid' },
+    rating: { score: 4.3, source: 'G2' },
+    description:
+      'iPad-first EHR and medical billing with AI-powered speech-to-text charting. Dictate clinical notes, auto-generate billing codes, and manage patient records from an intuitive touch interface.',
+    bestFor: ['Small practices', 'iPad-based charting'],
+    industries: ['health-wellness'],
+    categories: ['documentation'],
+  },
+  {
+    name: 'Practice Better',
+    slug: 'practice-better',
+    url: 'https://www.practicebetter.io',
+    pricing: { label: 'From $25/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'Capterra' },
+    description:
+      'Practice management for nutritionists, health coaches, and wellness practitioners. Includes charting, client portals, meal plan builders, and automated protocols. Clients can log food, symptoms, and progress between visits.',
+    bestFor: ['Wellness practitioners', 'Health coaches'],
+    industries: ['health-wellness'],
+    categories: ['documentation'],
+  },
+  {
+    name: 'ChiroTouch',
+    slug: 'chirotouch',
+    url: 'https://www.chirotouch.com',
+    pricing: { label: 'From $159/mo', type: 'paid' },
+    rating: { score: 4.0, source: 'Capterra' },
+    description:
+      'EHR and practice management built for chiropractors. AI-assisted SOAP notes, compliance-ready documentation, and built-in billing. Designed around the chiropractic workflow from intake to adjustment to billing.',
+    bestFor: ['Chiropractors', 'SOAP notes'],
+    industries: ['health-wellness'],
+    categories: ['documentation'],
   },
 ];
 
