@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Small Business Owner's Guide to AI — AIStartupGuide.com</title>
+<meta name="description" content="No jargon, no hype. A plain-English guide to what AI actually does for small businesses, what it costs, and where to start — written for owners, not developers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #faf8f5;
+    --warm: #e8e2d8;
+    --accent: #c45d3e;
+    --accent-hover: #a8462b;
+    --accent-light: #fdf0ec;
+    --sage: #5a7a6a;
+    --sage-light: #eef3f0;
+    --muted: #7a7568;
+    --border: #e0dbd2;
+    --card-bg: #ffffff;
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ——— NAV ——— */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250, 248, 245, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    transition: transform 0.2s, background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--accent) !important; transform: translateY(-1px); }
+
+  /* ——— BREADCRUMB ——— */
+  .breadcrumb {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 84px 32px 0;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .breadcrumb a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb .sep { margin: 0 8px; opacity: 0.5; }
+  .breadcrumb .current { color: var(--ink); font-weight: 500; }
+
+  /* ——— ARTICLE ——— */
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 32px 0;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .article-meta .meta-dot {
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--border);
+  }
+
+  .article h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    margin-bottom: 20px;
+    max-width: 640px;
+  }
+
+  .article-intro {
+    font-size: 1.12rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 48px;
+    max-width: 620px;
+  }
+
+  .article h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    margin: 56px 0 20px;
+    line-height: 1.2;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .article h2:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .article h3 {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 32px 0 10px;
+    letter-spacing: -0.2px;
+  }
+
+  .article p {
+    font-size: 1rem;
+    color: var(--ink);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .article strong { font-weight: 600; }
+
+  /* Callout boxes */
+  .callout {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+  .callout p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+  .callout p + p { margin-top: 12px; }
+  .callout strong { color: var(--ink); }
+
+  .callout-sage {
+    border-left-color: var(--sage);
+    background: var(--sage-light);
+  }
+
+  /* Example grid */
+  .example-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0 32px;
+  }
+  .example-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+  .example-card .emoji {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .example-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .example-card p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  /* Cost table */
+  .cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0 32px;
+    font-size: 0.92rem;
+  }
+  .cost-table th {
+    text-align: left;
+    font-weight: 700;
+    padding: 14px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+  }
+  .cost-table td {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    background: white;
+    vertical-align: top;
+  }
+  .cost-table td:first-child { font-weight: 600; }
+  .cost-table tr:hover td { background: var(--paper); }
+
+  /* Steps */
+  .steps {
+    list-style: none;
+    margin: 28px 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .step {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.88rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step div h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .step div p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 0;
+  }
+
+  /* CTA banner */
+  .guide-cta {
+    background: var(--ink);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    color: white;
+    text-align: center;
+    margin: 64px 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .guide-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background: rgba(196,93,62,0.2);
+    filter: blur(60px);
+  }
+  .guide-cta h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    color: white;
+    margin: 0 0 12px;
+    border: none;
+    padding: 0;
+    letter-spacing: -0.8px;
+  }
+  .guide-cta p {
+    color: rgba(255,255,255,0.6);
+    max-width: 440px;
+    margin: 0 auto 28px;
+    font-size: 1rem;
+  }
+  .guide-cta-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,93,62,0.25); }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.25s;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+
+  /* ——— NEWSLETTER ——— */
+  .newsletter {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 32px;
+  }
+  .section-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    letter-spacing: -0.8px;
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
+  .section-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .newsletter-form input {
+    flex: 1;
+    padding: 16px 20px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .newsletter-form input:focus { border-color: var(--accent); }
+  .newsletter-form input::placeholder { color: #bbb; }
+  .newsletter-note { font-size: 0.78rem; color: var(--muted); margin-top: 14px; }
+
+  /* ——— FOOTER ——— */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 60px 32px 40px;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+  }
+  .footer-brand .logo { font-size: 1.2rem; }
+  .footer-brand p {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 12px;
+    line-height: 1.6;
+    max-width: 280px;
+  }
+  .footer-col h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .footer-col a {
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--accent); }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  /* ——— ANIMATIONS ——— */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ——— RESPONSIVE ——— */
+  @media (max-width: 900px) {
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    .example-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 540px) {
+    .newsletter-form { flex-direction: column; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .guide-cta { padding: 36px 24px; }
+    .guide-cta-links { flex-direction: column; align-items: stretch; }
+    .cost-table { font-size: 0.82rem; }
+    .cost-table th, .cost-table td { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">AI<span>Startup</span>Guide</a>
+    <div class="nav-links">
+      <a href="#">Industries</a>
+      <a href="#">FAQ</a>
+      <a href="#">Top Tools</a>
+      <a href="#">Blog</a>
+      <a href="#" class="nav-cta">Get the Newsletter</a>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="#">Home</a>
+  <span class="sep">›</span>
+  <a href="#">Guides</a>
+  <span class="sep">›</span>
+  <span class="current">Introduction to AI for Small Business</span>
+</div>
+
+<!-- ARTICLE -->
+<article class="article fade-up">
+  <div class="article-meta">
+    <span>6 min read</span>
+    <span class="meta-dot"></span>
+    <span>Last updated <strong>Feb 2026</strong></span>
+  </div>
+
+  <h1>A plain-English guide to AI for small business owners</h1>
+
+  <p class="article-intro">You keep hearing about AI. Your competitors might already be using it. But nobody has explained what it actually does for a business like yours — without the jargon, the hype, or the $10,000 consulting pitch. This page fixes that.</p>
+
+  <!-- SECTION 1 -->
+  <h2>What AI actually does for businesses like yours</h2>
+
+  <p>Forget robots and science fiction. For a small business owner, AI is software that handles work you'd normally do yourself — or hire someone to do. It writes emails, answers customer questions, generates invoices, schedules jobs, creates marketing graphics, and organizes your data. It's not magic. It's automation that's gotten dramatically better in the last two years.</p>
+
+  <p>Here's the simplest way to think about it: <strong>AI is a tireless assistant that works 24/7 for $30–$100 a month.</strong> It won't replace your team. It handles the repetitive stuff so your team can focus on the work that actually requires a human.</p>
+
+  <div class="example-grid">
+    <div class="example-card">
+      <span class="emoji">📋</span>
+      <h4>Scheduling & dispatch</h4>
+      <p>AI fills gaps in your calendar, suggests optimal routes for your crew, and sends automatic reminders to clients so they don't no-show.</p>
+    </div>
+    <div class="example-card">
+      <span class="emoji">💬</span>
+      <h4>Customer communication</h4>
+      <p>An AI chatbot on your website answers common questions, captures leads, and books appointments — even at 2 AM when you're asleep.</p>
+    </div>
+    <div class="example-card">
+      <span class="emoji">📊</span>
+      <h4>Bookkeeping & invoicing</h4>
+      <p>AI categorizes your expenses, matches receipts, sends payment reminders, and flags unusual charges before they become problems.</p>
+    </div>
+    <div class="example-card">
+      <span class="emoji">🎨</span>
+      <h4>Marketing & social media</h4>
+      <p>AI creates professional graphics, writes social media posts, generates ad copy, and even suggests what to post and when — no design skills needed.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>The key insight:</strong> You don't need to understand how AI works to use it. The tools we recommend are designed for business owners, not programmers. If you can use email and social media, you can use these tools.</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2>What does it actually cost?</h2>
+
+  <p>Less than you think. Most AI-powered business tools fall into three pricing categories, and nearly all of them let you try before you buy.</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Monthly Cost</th>
+        <th>What You Get</th>
+        <th>Examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Free</td>
+        <td>$0</td>
+        <td>Basic features, usage limits, enough to test if it's useful for your business</td>
+        <td>ChatGPT free tier, Canva free, Invoice Ninja, Joist</td>
+      </tr>
+      <tr>
+        <td>Mid-range</td>
+        <td>$19–$65/mo</td>
+        <td>Full features for a solo operator or small team, most of what you need day-to-day</td>
+        <td>Jobber, FreshBooks, Housecall Pro, QuickBooks</td>
+      </tr>
+      <tr>
+        <td>Premium</td>
+        <td>$97–$400/mo</td>
+        <td>Advanced automation, multi-user, CRM + marketing combined, built for growing teams</td>
+        <td>GoHighLevel, ServiceTitan, Podium</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-sage">
+    <p><strong>Our advice:</strong> Start with a free tier or trial. Every tool we recommend has one. Test it on a real project. If it doesn't save you noticeable time in the first week, move on — there are plenty of options.</p>
+  </div>
+
+  <p>Think of it this way: if a $49/month tool saves you 5 hours a week on scheduling, quoting, or follow-ups, that's your time back at a fraction of what you'd pay someone to do it. Most business owners who adopt even one tool see the ROI within the first month.</p>
+
+  <!-- SECTION 3 -->
+  <h2>Where to start (a 4-step plan)</h2>
+
+  <p>You don't need to adopt everything at once. Most business owners who succeed with AI start with exactly one tool — the one that solves their biggest headache.</p>
+
+  <ol class="steps">
+    <li class="step">
+      <span class="step-num">1</span>
+      <div>
+        <h4>Identify your biggest time sink</h4>
+        <p>What eats up your week? Scheduling and rescheduling? Writing estimates? Chasing overdue invoices? Answering the same customer questions? That's where AI helps most. Pick the one task that costs you the most time or the most missed revenue.</p>
+      </div>
+    </li>
+    <li class="step">
+      <span class="step-num">2</span>
+      <div>
+        <h4>Find the right tool for your industry</h4>
+        <p>A tool built for your specific type of business will always beat a generic one. That's why we organize everything by industry. Browse your industry page, look at the category that matches your pain point, and pick from our top recommendations.</p>
+      </div>
+    </li>
+    <li class="step">
+      <span class="step-num">3</span>
+      <div>
+        <h4>Start with the free tier</h4>
+        <p>Sign up, spend 30 minutes setting it up, and use it on a real job or a real client interaction. Don't bother with tutorials until you've actually clicked around. Most of these tools are designed so you can figure them out as you go.</p>
+      </div>
+    </li>
+    <li class="step">
+      <span class="step-num">4</span>
+      <div>
+        <h4>Add a second tool once the first one sticks</h4>
+        <p>Once your first tool is saving you time consistently, pick a second one — ideally one that integrates with the first. For example: Jobber connects to QuickBooks, CompanyCam connects to Buildertrend. Tools that talk to each other save you from entering the same data twice.</p>
+      </div>
+    </li>
+  </ol>
+
+  <!-- SECTION 4 -->
+  <h2>Common concerns (and honest answers)</h2>
+
+  <h3>"I'm not tech-savvy."</h3>
+  <p>You don't need to be. The tools we recommend are built for business owners who've never written a line of code. They have drag-and-drop interfaces, step-by-step setup wizards, and customer support teams that will walk you through everything. If you've ever set up a Facebook page or used online banking, you have more than enough technical skill.</p>
+
+  <h3>"Will AI replace my employees?"</h3>
+  <p>For most small businesses, no. AI handles the repetitive work — data entry, scheduling conflicts, follow-up emails, social media posts — so your people can focus on the skilled, relationship-driven work that customers actually pay for. Think of it as giving your team a superpower, not a pink slip.</p>
+
+  <h3>"Is my data safe?"</h3>
+  <p>The tools we recommend are established SaaS companies with standard security practices — encrypted data, secure servers, the same protections your bank uses. That said, we always flag data handling in our reviews, and we recommend reading any tool's privacy policy before entering sensitive client information.</p>
+
+  <h3>"What if I pick the wrong tool?"</h3>
+  <p>You cancel and try another one. Seriously. These aren't five-year contracts. Most tools are month-to-month, and nearly all offer free tiers or 14-day trials. The biggest mistake isn't picking the wrong tool — it's spending six months "researching" instead of just trying one.</p>
+
+  <!-- CTA -->
+  <div class="guide-cta">
+    <h2>Ready to find the right tools?</h2>
+    <p>We've tested and reviewed 120+ AI tools, organized by the industry you actually work in. No jargon, no hype — just honest recommendations.</p>
+    <div class="guide-cta-links">
+      <a href="#" class="btn-primary">Browse by Industry →</a>
+      <a href="#" class="btn-ghost">See This Week's Top Picks</a>
+    </div>
+  </div>
+</article>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <span class="section-label">Stay Ahead</span>
+  <h2 class="section-title">Get the best AI tools in your inbox</h2>
+  <p class="section-sub">A weekly email with new tool discoveries, industry-specific tips, and no-BS advice for small business owners adopting AI.</p>
+  <form class="newsletter-form" onsubmit="event.preventDefault()">
+    <input type="email" placeholder="you@yourbusiness.com" required>
+    <button type="submit" class="btn-primary">Subscribe Free</button>
+  </form>
+  <p class="newsletter-note">Join 2,400+ small business owners. Unsubscribe anytime.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">AI<span>Startup</span>Guide</a>
+      <p>Helping small business owners navigate AI with confidence. Independent reviews, honest recommendations.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <a href="#">Professional Services</a>
+      <a href="#">Construction & Trades</a>
+      <a href="#">Transportation</a>
+      <a href="#">Real Estate</a>
+    </div>
+    <div class="footer-col">
+      <h4>More Industries</h4>
+      <a href="#">Retail & E-Commerce</a>
+      <a href="#">Food & Restaurants</a>
+      <a href="#">Health & Wellness</a>
+      <a href="#">Home & Personal Services</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">AI Intro Guide</a>
+      <a href="#">Blog</a>
+      <a href="#">Newsletter</a>
+      <a href="#">Book a Session</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 AIStartupGuide.com. All rights reserved.</span>
+    <span>Wilmington, NC</span>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
