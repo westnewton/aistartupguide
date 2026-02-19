@@ -1,9 +1,102 @@
+import type { Metadata } from 'next';
+import HeroCard from '@/components/HeroCard';
+import IndustryCard from '@/components/IndustryCard';
+import FAQAccordion from '@/components/FAQAccordion';
+import FadeUp from '@/components/FadeUp';
 import NewsletterCTA from '@/components/NewsletterCTA';
+
+export const metadata: Metadata = {
+  title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
+  description:
+    'Stop sifting through thousands of AI products. We test and curate the best tools for small businesses — organized by your industry, explained in plain English.',
+  openGraph: {
+    title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
+    description:
+      'Stop sifting through thousands of AI products. We test and curate the best tools for small businesses — organized by your industry, explained in plain English.',
+    type: 'website',
+    url: 'https://aistartupguide.com',
+  },
+};
+
+const industries = [
+  {
+    slug: 'professional-services',
+    colorClass: 'ic-professional',
+    emoji: '💼',
+    name: 'Professional Services',
+    description: 'Accountants, lawyers, consultants, engineers, architects',
+    toolCount: 16,
+    bizCount: '4.6M businesses in the U.S.',
+  },
+  {
+    slug: 'construction-trades',
+    colorClass: 'ic-construction',
+    emoji: '🔨',
+    name: 'Construction & Trades',
+    description: 'General contractors, electricians, plumbers, HVAC, roofers',
+    toolCount: 12,
+    bizCount: '3.6M businesses in the U.S.',
+  },
+  {
+    slug: 'transportation-logistics',
+    colorClass: 'ic-transport',
+    emoji: '🚚',
+    name: 'Transportation & Logistics',
+    description: 'Trucking, moving companies, delivery, freight, couriers',
+    toolCount: 9,
+    bizCount: '3.4M businesses in the U.S.',
+  },
+  {
+    slug: 'real-estate',
+    colorClass: 'ic-realestate',
+    emoji: '🏠',
+    name: 'Real Estate',
+    description: 'Agents, brokerages, property management, inspections',
+    toolCount: 15,
+    bizCount: '3.3M businesses in the U.S.',
+  },
+  {
+    slug: 'retail-ecommerce',
+    colorClass: 'ic-retail',
+    emoji: '🛒',
+    name: 'Retail & E-Commerce',
+    description: 'Shops, boutiques, online stores, specialty, convenience',
+    toolCount: 13,
+    bizCount: '2.9M businesses in the U.S.',
+  },
+  {
+    slug: 'food-restaurants',
+    colorClass: 'ic-food',
+    emoji: '🍽️',
+    name: 'Food & Restaurants',
+    description: 'Restaurants, cafés, food trucks, catering, bars',
+    toolCount: 11,
+    bizCount: 'Top sector by new openings',
+  },
+  {
+    slug: 'health-wellness',
+    colorClass: 'ic-health',
+    emoji: '🩺',
+    name: 'Health & Wellness',
+    description: 'Doctors, dentists, chiropractors, fitness, physical therapy',
+    toolCount: 14,
+    bizCount: '10% of all small businesses',
+  },
+  {
+    slug: 'home-personal-services',
+    colorClass: 'ic-personal',
+    emoji: '✂️',
+    name: 'Home & Personal Services',
+    description: 'Cleaning, landscaping, salons, pet care, auto repair',
+    toolCount: 10,
+    bizCount: 'Fastest-growing segment',
+  },
+];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
+      {/* ─── HERO ─── */}
       <section className="hero">
         <div className="hero-content">
           <h1>
@@ -35,73 +128,10 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-        <div className="hero-visual">
-          <div className="hero-card-stack">
-            <div className="hero-card">
-              <div className="hero-card-header">
-                <h3>Popular This Week</h3>
-                <span className="updated">Updated weekly</span>
-              </div>
-              <ul className="hero-tool-list">
-                <li className="hero-tool-item">
-                  <div className="tool-info">
-                    <span className="tool-emoji">🤖</span>
-                    <div className="tool-meta">
-                      <span className="tool-name">ChatGPT</span>
-                      <span className="tool-use">Writing, research, customer replies</span>
-                    </div>
-                  </div>
-                  <span className="tool-tag tag-freemium">Freemium</span>
-                </li>
-                <li className="hero-tool-item">
-                  <div className="tool-info">
-                    <span className="tool-emoji">📋</span>
-                    <div className="tool-meta">
-                      <span className="tool-name">Jobber</span>
-                      <span className="tool-use">Scheduling, quoting, invoicing</span>
-                    </div>
-                  </div>
-                  <span className="tool-tag tag-paid">From $49/mo</span>
-                </li>
-                <li className="hero-tool-item">
-                  <div className="tool-info">
-                    <span className="tool-emoji">🎨</span>
-                    <div className="tool-meta">
-                      <span className="tool-name">Canva AI</span>
-                      <span className="tool-use">Marketing graphics, social posts</span>
-                    </div>
-                  </div>
-                  <span className="tool-tag tag-free">Free tier</span>
-                </li>
-                <li className="hero-tool-item">
-                  <div className="tool-info">
-                    <span className="tool-emoji">💬</span>
-                    <div className="tool-meta">
-                      <span className="tool-name">Tidio</span>
-                      <span className="tool-use">AI chatbot, lead capture</span>
-                    </div>
-                  </div>
-                  <span className="tool-tag tag-freemium">Freemium</span>
-                </li>
-                <li className="hero-tool-item">
-                  <div className="tool-info">
-                    <span className="tool-emoji">📊</span>
-                    <div className="tool-meta">
-                      <span className="tool-name">QuickBooks AI</span>
-                      <span className="tool-use">Bookkeeping, expense tracking</span>
-                    </div>
-                  </div>
-                  <span className="tool-tag tag-paid">From $30/mo</span>
-                </li>
-              </ul>
-            </div>
-            <div className="float-tag ft1">120+ tools reviewed</div>
-            <div className="float-tag ft2">Tested by real owners</div>
-          </div>
-        </div>
+        <HeroCard />
       </section>
 
-      {/* Trust Bar */}
+      {/* ─── TRUST BAR ─── */}
       <div className="trust-bar">
         <div className="trust-inner">
           <div className="trust-stat">
@@ -126,9 +156,9 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Industries - placeholder for Phase 3 */}
-      <section id="industries" style={{ maxWidth: 1200, margin: '0 auto', padding: '100px 32px' }}>
-        <div className="section-header">
+      {/* ─── INDUSTRIES ─── */}
+      <section id="industries">
+        <FadeUp className="section-header">
           <span className="section-label">Browse by Industry</span>
           <h2 className="section-title">AI tools curated for your industry</h2>
           <p className="section-sub">
@@ -136,13 +166,83 @@ export default function HomePage() {
             breakdowns, and setup guides written for business owners — not
             developers.
           </p>
+        </FadeUp>
+        <div className="industry-grid">
+          {industries.map((industry) => (
+            <FadeUp key={industry.slug}>
+              <IndustryCard {...industry} />
+            </FadeUp>
+          ))}
         </div>
-        <p style={{ color: 'var(--muted)', fontStyle: 'italic' }}>
-          Industry grid coming in Phase 3.
-        </p>
       </section>
 
-      {/* Newsletter */}
+      {/* ─── FAQ ─── */}
+      <section id="faq">
+        <FadeUp className="faq-layout">
+          <div>
+            <span className="section-label">Common Questions</span>
+            <h2 className="section-title">What business owners ask us</h2>
+            <p className="section-sub">
+              We hear these questions every week. If yours isn&apos;t here, reach
+              out — we&apos;re happy to help.
+            </p>
+          </div>
+          <FAQAccordion />
+        </FadeUp>
+      </section>
+
+      {/* ─── FEATURED TOOLS (Editor's Picks) ─── */}
+      <section id="tools">
+        <FadeUp className="featured-banner">
+          <div>
+            <span className="section-label">Editor&apos;s Picks</span>
+            <h2 className="section-title">This week&apos;s top tools</h2>
+            <p className="section-sub">
+              Our latest finds that are actually worth your time — tested,
+              reviewed, and ready for your business.
+            </p>
+            <a
+              href="#"
+              className="btn-primary"
+              style={{ marginTop: 28 }}
+            >
+              See All Reviews →
+            </a>
+          </div>
+          <div className="featured-tools-list">
+            <div className="ft-item">
+              <div className="ft-icon">📋</div>
+              <div className="ft-details">
+                <h4>Jobber</h4>
+                <p>AI scheduling &amp; quoting for service businesses</p>
+              </div>
+            </div>
+            <div className="ft-item">
+              <div className="ft-icon">📸</div>
+              <div className="ft-details">
+                <h4>CompanyCam</h4>
+                <p>Smart photo documentation for job sites</p>
+              </div>
+            </div>
+            <div className="ft-item">
+              <div className="ft-icon">💬</div>
+              <div className="ft-details">
+                <h4>Tidio</h4>
+                <p>AI chatbot for customer support &amp; lead capture</p>
+              </div>
+            </div>
+            <div className="ft-item">
+              <div className="ft-icon">📊</div>
+              <div className="ft-details">
+                <h4>GoHighLevel</h4>
+                <p>All-in-one CRM with AI marketing automation</p>
+              </div>
+            </div>
+          </div>
+        </FadeUp>
+      </section>
+
+      {/* ─── NEWSLETTER ─── */}
       <NewsletterCTA />
     </>
   );

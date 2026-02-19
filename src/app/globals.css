@@ -173,6 +173,12 @@ h1, h2, h3, .section-title, .logo, .trust-stat .num {
 }
 
 /* ─── SECTION COMMON ─── */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+
 .section-label {
   display: inline-block;
   font-size: 0.78rem;
