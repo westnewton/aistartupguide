@@ -25,7 +25,7 @@ const industries = [
     emoji: '💼',
     name: 'Professional Services',
     description: 'Accountants, lawyers, consultants, engineers, architects',
-    toolCount: 16,
+    toolCount: 17,
     bizCount: '4.6M businesses in the U.S.',
   },
   {
@@ -43,7 +43,7 @@ const industries = [
     emoji: '🚚',
     name: 'Transportation & Logistics',
     description: 'Trucking, moving companies, delivery, freight, couriers',
-    toolCount: 9,
+    toolCount: 17,
     bizCount: '3.4M businesses in the U.S.',
   },
   {
@@ -61,7 +61,7 @@ const industries = [
     emoji: '🛒',
     name: 'Retail & E-Commerce',
     description: 'Shops, boutiques, online stores, specialty, convenience',
-    toolCount: 13,
+    toolCount: 18,
     bizCount: '2.9M businesses in the U.S.',
   },
   {
@@ -70,7 +70,7 @@ const industries = [
     emoji: '🍽️',
     name: 'Food & Restaurants',
     description: 'Restaurants, cafés, food trucks, catering, bars',
-    toolCount: 11,
+    toolCount: 17,
     bizCount: 'Top sector by new openings',
   },
   {
@@ -79,7 +79,7 @@ const industries = [
     emoji: '🩺',
     name: 'Health & Wellness',
     description: 'Doctors, dentists, chiropractors, fitness, physical therapy',
-    toolCount: 14,
+    toolCount: 17,
     bizCount: '10% of all small businesses',
   },
   {
