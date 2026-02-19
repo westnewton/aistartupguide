@@ -676,7 +676,7 @@ export const tools: Tool[] = [
     slug: 'verizon-connect',
     url: 'https://www.verizonconnect.com',
     pricing: { label: 'Custom pricing', type: 'paid' },
-    rating: { score: 4.1, source: 'G2' },
+    rating: { score: 3.2, source: 'Capterra' },
     description:
       'Enterprise fleet tracking with AI-powered fuel optimization and driver scoring. Real-time GPS, geofencing alerts, and maintenance scheduling. Reliable but geared toward larger operations.',
     bestFor: ['Mid-size fleets', 'Enterprise'],
@@ -688,7 +688,7 @@ export const tools: Tool[] = [
     slug: 'gps-trackit',
     url: 'https://gpstrackit.com',
     pricing: { label: 'From $25/vehicle/mo', type: 'paid' },
-    rating: { score: 4.0, source: 'Capterra' },
+    rating: { score: 4.6, source: 'Capterra' },
     description:
       'Affordable GPS tracking for small fleets. Real-time location, speed alerts, and trip history without the complexity of enterprise platforms. AI suggests route improvements based on driving patterns.',
     bestFor: ['Small fleets', 'Budget-friendly'],
@@ -711,7 +711,7 @@ export const tools: Tool[] = [
     name: 'Onfleet',
     slug: 'onfleet',
     url: 'https://onfleet.com',
-    pricing: { label: 'From $550/mo', type: 'paid' },
+    pricing: { label: 'From $599/mo', type: 'paid' },
     rating: { score: 4.6, source: 'G2' },
     description:
       'Last-mile delivery management with AI-optimized routing, real-time tracking, and automated customer notifications. Drivers get turn-by-turn directions while dispatchers see everything on a live map.',
@@ -723,8 +723,8 @@ export const tools: Tool[] = [
     name: 'DAT',
     slug: 'dat',
     url: 'https://www.dat.com',
-    pricing: { label: 'From $45/mo', type: 'paid' },
-    rating: { score: 4.1, source: 'G2' },
+    pricing: { label: 'From $49/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'G2' },
     description:
       'The largest load board in North America. AI matches available trucks with freight, provides rate estimates based on market data, and helps you negotiate fair prices. Essential for owner-operators and brokers.',
     bestFor: ['Owner-operators', 'Freight brokers'],
@@ -772,7 +772,7 @@ export const tools: Tool[] = [
     slug: 'eroad',
     url: 'https://www.eroad.com',
     pricing: { label: 'From $25/vehicle/mo', type: 'paid' },
-    rating: { score: 4.0, source: 'Capterra' },
+    rating: { score: 4.5, source: 'Capterra' },
     description:
       'ELD and tax compliance built for trucking. Automates IFTA fuel tax reporting, HOS logging, and DVIR inspections. Simpler than Samsara or Motive \u2014 focused on keeping small fleets compliant without the extras.',
     bestFor: ['Small fleets', 'IFTA compliance'],
