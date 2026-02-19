@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
   description:
     'Stop sifting through thousands of AI products. We test and curate the best tools for small businesses — organized by your industry, explained in plain English.',
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
     description:
@@ -20,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'AIStartupGuide.com',
     images: [
       {
-        url: '/og-default.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
     title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
     description:
       'Stop sifting through thousands of AI products. We test and curate the best tools for small businesses — organized by your industry, explained in plain English.',
-    images: ['/og-default.png'],
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: siteUrl,

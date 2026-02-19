@@ -19,7 +19,7 @@ const organizationJsonLd = {
   '@type': 'Organization',
   name: 'AIStartupGuide.com',
   url: 'https://aistartupguide.com',
-  logo: 'https://aistartupguide.com/og-default.png',
+  logo: 'https://aistartupguide.com/og-image.png',
   description:
     'Helping small business owners navigate AI with confidence. Independent reviews, honest recommendations.',
   address: {
