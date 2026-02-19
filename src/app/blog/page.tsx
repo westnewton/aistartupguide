@@ -4,20 +4,20 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Blog — AIStartupGuide.com',
   description:
-    'Practical AI tips, tool reviews, and advice for small business owners. Updated weekly.',
+    'Articles about AI tools for small businesses — practical tips, honest reviews, and plain-English guides organized by industry.',
 };
 
 export default function BlogPage() {
   return (
     <section style={{ textAlign: 'center', paddingTop: 140 }}>
       <span className="section-label">Coming Soon</span>
-      <h1 className="section-title">Blog</h1>
+      <h1 className="section-title">Blog — Coming Soon</h1>
       <p className="section-sub" style={{ margin: '0 auto 32px' }}>
-        Practical AI tips, tool reviews, and advice for small business owners.
-        We&apos;re working on our first posts — check back soon.
+        We&apos;re working on articles about AI tools for small businesses. In the
+        meantime, browse our industry guides.
       </p>
       <Link href="/" className="btn-primary">
-        Back to Home
+        Browse Industry Guides
       </Link>
     </section>
   );

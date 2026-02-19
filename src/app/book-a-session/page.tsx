@@ -2,22 +2,28 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Book a Session — AIStartupGuide.com',
+  title: 'Book a 1-on-1 Setup Session — AIStartupGuide.com',
   description:
-    'Get 1-on-1 help setting up AI tools for your business. We walk you through implementation, configuration, and best practices.',
+    'Need hands-on help getting an AI tool set up for your business? We offer 1-on-1 sessions at $150/hour where we walk you through everything.',
 };
 
 export default function BookASessionPage() {
   return (
     <section style={{ textAlign: 'center', paddingTop: 140 }}>
       <span className="section-label">1-on-1 Help</span>
-      <h1 className="section-title">Book a Setup Session</h1>
-      <p className="section-sub" style={{ margin: '0 auto 32px' }}>
-        Need hands-on help? We offer 1-on-1 setup sessions where we walk you through
-        implementation, configuration, and best practices for your specific business.
-        Sessions are $100–$200/hour.
+      <h1 className="section-title">Book a 1-on-1 Setup Session</h1>
+      <p className="section-sub" style={{ margin: '0 auto 28px' }}>
+        Need hands-on help getting an AI tool set up for your business? We offer
+        1-on-1 sessions at $150/hour where we walk you through everything.
       </p>
-      <Link href="/" className="btn-primary">
+      <p style={{ fontSize: '1.02rem', color: 'var(--ink)', fontWeight: 600, marginBottom: 36 }}>
+        Email{' '}
+        <a href="mailto:jason@aistartupguide.com" style={{ color: 'var(--accent)' }}>
+          jason@aistartupguide.com
+        </a>{' '}
+        to schedule
+      </p>
+      <Link href="/" className="btn-secondary">
         Back to Home
       </Link>
     </section>
