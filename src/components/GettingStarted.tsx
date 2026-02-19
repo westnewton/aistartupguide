@@ -6,7 +6,7 @@ interface GettingStartedProps {
 
 export default function GettingStarted({ tips }: GettingStartedProps) {
   return (
-    <div className="getting-started fade-up">
+    <div className="getting-started">
       <div className="gs-inner">
         <div>
           <div className="gs-label">Getting Started</div>

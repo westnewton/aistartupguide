@@ -9,7 +9,7 @@ const RANK_LABELS = ['#1 PICK', '#2 PICK', '#3 PICK'];
 
 export default function QuickPicks({ tools }: QuickPicksProps) {
   return (
-    <div className="quick-picks fade-up">
+    <div className="quick-picks">
       <div className="quick-picks-label">&#9889; Our Top 3 Picks</div>
       <div className="quick-picks-grid">
         {tools.map((tool, i) => (
