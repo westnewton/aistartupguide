@@ -1,17 +1,34 @@
 import Link from 'next/link';
 
-interface BreadcrumbProps {
-  industryName: string;
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
 }
 
-export default function Breadcrumb({ industryName }: BreadcrumbProps) {
+interface BreadcrumbProps {
+  industryName?: string;
+  items?: BreadcrumbItem[];
+}
+
+export default function Breadcrumb({ industryName, items }: BreadcrumbProps) {
+  const crumbs: BreadcrumbItem[] = items || [
+    { label: 'Home', href: '/' },
+    { label: 'Industries', href: '/#industries' },
+    { label: industryName || '' },
+  ];
+
   return (
     <div className="breadcrumb">
-      <Link href="/">Home</Link>
-      <span className="sep">&rsaquo;</span>
-      <Link href="/#industries">Industries</Link>
-      <span className="sep">&rsaquo;</span>
-      <span className="current">{industryName}</span>
+      {crumbs.map((crumb, i) => (
+        <span key={i}>
+          {i > 0 && <span className="sep">&rsaquo;</span>}
+          {crumb.href ? (
+            <Link href={crumb.href}>{crumb.label}</Link>
+          ) : (
+            <span className="current">{crumb.label}</span>
+          )}
+        </span>
+      ))}
     </div>
   );
 }
