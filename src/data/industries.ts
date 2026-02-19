@@ -107,7 +107,7 @@ export const industries: Industry[] = [
     slug: 'home-personal-services',
     emoji: '\u2702\uFE0F',
     metaDescription:
-      'Compare 18+ hand-tested AI tools for cleaners, landscapers, salons, pet care, auto repair and more. Independent reviews with real pricing, pros & cons, and setup guides.',
+      'Compare 18+ hand-tested AI tools for cleaners, landscapers, salons, pet care and auto repair. Independent reviews with real pricing and setup guides.',
     heroSubtitle:
       'We tested every AI tool worth considering for cleaners, landscapers, salon owners, pet groomers, handymen, and mobile service pros. Here are the ones that actually help you book more clients and run a tighter operation.',
     toolCount: 18,
@@ -309,7 +309,7 @@ export const industries: Industry[] = [
     slug: 'professional-services',
     emoji: '\u{1F4BC}',
     metaDescription:
-      'Compare 17+ hand-tested AI tools for accountants, lawyers, consultants, engineers, and architects. Independent reviews with real pricing, pros & cons, and setup guides.',
+      'Compare 17+ hand-tested AI tools for accountants, lawyers, consultants and architects. Independent reviews with real pricing and setup guides.',
     heroSubtitle:
       'We tested every AI tool worth considering for accountants, lawyers, consultants, engineers, and architects. Here are the ones that actually help you serve more clients and bill more hours.',
     toolCount: 17,
@@ -410,7 +410,7 @@ export const industries: Industry[] = [
     slug: 'transportation-logistics',
     emoji: '\u{1F69A}',
     metaDescription:
-      'Compare 17+ hand-tested AI tools for trucking companies, movers, delivery services, freight brokers, and couriers. Independent reviews with real pricing, pros & cons.',
+      'Compare 17+ hand-tested AI tools for trucking companies, movers, delivery services and freight brokers. Independent reviews with real pricing.',
     heroSubtitle:
       'We tested every AI tool worth considering for trucking companies, moving companies, delivery services, freight brokers, and couriers. Here are the ones that actually cut costs and keep you rolling.',
     toolCount: 17,
@@ -713,7 +713,7 @@ export const industries: Industry[] = [
     slug: 'health-wellness',
     emoji: '\u{1FA7A}',
     metaDescription:
-      'Compare 17+ hand-tested AI tools for doctors, dentists, chiropractors, fitness studios, and physical therapists. Independent reviews with real pricing, pros & cons.',
+      'Compare 17+ hand-tested AI tools for doctors, dentists, chiropractors and fitness studios. Independent reviews with real pricing and setup guides.',
     heroSubtitle:
       'We tested every AI tool worth considering for doctors, dentists, chiropractors, fitness studios, and physical therapy practices. Here are the ones that actually improve patient care and practice efficiency.',
     toolCount: 17,

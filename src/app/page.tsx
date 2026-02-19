@@ -9,13 +9,72 @@ export const metadata: Metadata = {
   title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
   description:
     'Stop sifting through thousands of AI products. We test and curate the best tools for small businesses — organized by your industry, explained in plain English.',
-  openGraph: {
-    title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
-    description:
-      'Stop sifting through thousands of AI products. We test and curate the best tools for small businesses — organized by your industry, explained in plain English.',
-    type: 'website',
-    url: 'https://aistartupguide.com',
+  alternates: {
+    canonical: 'https://aistartupguide.com',
   },
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'AIStartupGuide.com',
+  url: 'https://aistartupguide.com',
+  logo: 'https://aistartupguide.com/og-default.png',
+  description:
+    'Helping small business owners navigate AI with confidence. Independent reviews, honest recommendations.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Wilmington',
+    addressRegion: 'NC',
+    addressCountry: 'US',
+  },
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Are these tools actually worth it for a small business?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most of the tools we recommend have free tiers or trials, so you can test them risk-free. We focus on tools that save time or generate revenue for businesses with 1\u201350 employees \u2014 not enterprise software repackaged for small teams. Every review includes real pricing and our honest take on whether the ROI is there.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "I'm not tech-savvy. Can I still use AI tools?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Absolutely. The majority of tools we feature are designed for non-technical users \u2014 think drag-and-drop interfaces, not code. Our setup guides walk you through everything step by step. If you can use email and social media, you can use these tools.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do you choose which tools to feature?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "We personally test every tool before recommending it. We evaluate ease of use, pricing transparency, customer support quality, and real-world impact for small businesses. We're independent \u2014 no tool pays for placement in our reviews or rankings.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is AI going to replace my employees?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For most small businesses, AI is a force multiplier \u2014 not a replacement. It handles repetitive tasks (scheduling, follow-ups, data entry) so your team can focus on the work that actually requires a human touch. Think of it as hiring a tireless assistant for $30\u2013$100/month.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I need help setting up a tool?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We offer 1-on-1 setup sessions where we walk you through implementation, configuration, and best practices for your specific business. Book a session through our contact page and we\u2019ll get you up and running fast.',
+      },
+    },
+  ],
 };
 
 const industries = [
@@ -96,6 +155,15 @@ const industries = [
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* ─── HERO ─── */}
       <section className="hero">
         <div className="hero-content">

@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: 'Blog — AIStartupGuide.com',
   description:
     'Articles about AI tools for small businesses — practical tips, honest reviews, and plain-English guides organized by industry.',
+  openGraph: {
+    title: 'Blog — AIStartupGuide.com',
+    description:
+      'Articles about AI tools for small businesses — practical tips, honest reviews, and plain-English guides organized by industry.',
+    type: 'website',
+    url: 'https://aistartupguide.com/blog',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog — AIStartupGuide.com',
+    description:
+      'Articles about AI tools for small businesses — practical tips, honest reviews, and plain-English guides organized by industry.',
+  },
+  alternates: {
+    canonical: 'https://aistartupguide.com/blog',
+  },
 };
 
 export default function BlogPage() {
