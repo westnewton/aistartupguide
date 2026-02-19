@@ -479,7 +479,7 @@ export const tools: Tool[] = [
     name: 'Clio',
     slug: 'clio',
     url: 'https://www.clio.com',
-    pricing: { label: 'From $39/mo', type: 'paid' },
+    pricing: { label: 'From $49/user/mo', type: 'paid' },
     rating: { score: 4.6, source: 'G2' },
     description:
       'The top-rated practice management platform for law firms. AI organizes client matters, tracks deadlines, manages documents, and handles billing in one place. Used by 150K+ legal professionals.',
@@ -564,7 +564,7 @@ export const tools: Tool[] = [
     slug: 'bill4time',
     url: 'https://www.bill4time.com',
     pricing: { label: 'From $27/user/mo', type: 'paid' },
-    rating: { score: 4.4, source: 'Capterra' },
+    rating: { score: 4.8, source: 'Capterra' },
     description:
       'Time and billing built for legal and accounting professionals. Track billable hours, generate LEDES-format invoices, manage trust accounts, and run profitability reports by matter or client.',
     bestFor: ['Law firms', 'Accountants'],
@@ -635,7 +635,7 @@ export const tools: Tool[] = [
     name: 'Jasper',
     slug: 'jasper',
     url: 'https://www.jasper.ai',
-    pricing: { label: 'From $49/mo', type: 'paid' },
+    pricing: { label: 'From $39/mo', type: 'paid' },
     rating: { score: 4.7, source: 'G2' },
     description:
       'AI writing assistant trained on marketing best practices. Generate blog posts, case studies, website copy, and thought leadership content on brand. Learns your firm\u2019s tone and terminology.',
@@ -647,7 +647,7 @@ export const tools: Tool[] = [
     name: 'Grammarly Business',
     slug: 'grammarly-business',
     url: 'https://www.grammarly.com/business',
-    pricing: { label: 'From $15/user/mo', type: 'paid' },
+    pricing: { label: 'From $12/member/mo', type: 'paid' },
     rating: { score: 4.7, source: 'G2' },
     description:
       'AI writing assistant that catches errors, improves clarity, and ensures consistent tone across your firm. Works in email, docs, and browsers. Keeps client-facing communication polished and professional.',
@@ -788,7 +788,7 @@ export const tools: Tool[] = [
     slug: 'cin7',
     url: 'https://www.cin7.com',
     pricing: { label: 'From $349/mo', type: 'paid' },
-    rating: { score: 4.3, source: 'G2' },
+    rating: { score: 4.3, source: 'Capterra' },
     description:
       'Inventory management that syncs stock across your store, warehouse, and online channels in real time. AI forecasts demand, automates reorders, and prevents stockouts before they happen.',
     bestFor: ['Multi-channel', 'Growing retailers'],
@@ -812,7 +812,7 @@ export const tools: Tool[] = [
     slug: 'inflow',
     url: 'https://www.inflowinventory.com',
     pricing: { label: 'From $89/mo', type: 'paid' },
-    rating: { score: 4.5, source: 'Capterra' },
+    rating: { score: 4.6, source: 'Capterra' },
     description:
       'Inventory and order management for small to mid-size retailers. Track products across locations, manage purchase orders, and generate barcodes. Integrates with Shopify, Amazon, and QuickBooks.',
     bestFor: ['SMB retail', 'Order management'],
@@ -824,7 +824,7 @@ export const tools: Tool[] = [
     slug: 'shopify',
     url: 'https://www.shopify.com',
     pricing: { label: 'From $39/mo', type: 'paid' },
-    rating: { score: 4.6, source: 'G2' },
+    rating: { score: 4.4, source: 'G2' },
     description:
       'The leading e-commerce platform with AI-powered product descriptions, automated marketing, and built-in analytics. Set up a professional online store in hours, not weeks. Handles payments, shipping, and tax automatically.',
     bestFor: ['All sizes', 'Online selling'],
@@ -860,7 +860,7 @@ export const tools: Tool[] = [
     slug: 'square-pos',
     url: 'https://squareup.com',
     pricing: { label: 'Free + transaction fees', type: 'freemium' },
-    rating: { score: 4.6, source: 'G2' },
+    rating: { score: 4.6, source: 'Capterra' },
     description:
       'Free point-of-sale system with built-in payments, inventory tracking, and customer profiles. AI provides sales insights, identifies your best sellers, and suggests optimal staffing levels based on traffic patterns.',
     bestFor: ['All sizes', 'Easy setup'],
@@ -872,7 +872,7 @@ export const tools: Tool[] = [
     slug: 'lightspeed',
     url: 'https://www.lightspeedhq.com',
     pricing: { label: 'From $89/mo', type: 'paid' },
-    rating: { score: 4.1, source: 'G2' },
+    rating: { score: 4.0, source: 'G2' },
     description:
       'POS and inventory management for retail stores. AI-powered purchase ordering, multi-location stock transfers, and detailed analytics. Better for specialty retailers who need deep inventory control.',
     bestFor: ['Specialty retail', 'Multi-location'],
@@ -908,7 +908,7 @@ export const tools: Tool[] = [
     slug: 'hootsuite',
     url: 'https://www.hootsuite.com',
     pricing: { label: 'From $99/mo', type: 'paid' },
-    rating: { score: 4.2, source: 'G2' },
+    rating: { score: 4.1, source: 'G2' },
     description:
       'Manage all your social media from one dashboard. AI suggests optimal posting times, writes captions, and monitors brand mentions. Schedule weeks of content in advance across Instagram, Facebook, TikTok, and more.',
     bestFor: ['Multi-platform', 'Social scheduling'],
@@ -956,7 +956,7 @@ export const tools: Tool[] = [
     slug: 'prisync',
     url: 'https://prisync.com',
     pricing: { label: 'From $99/mo', type: 'paid' },
-    rating: { score: 4.6, source: 'Capterra' },
+    rating: { score: 4.8, source: 'Capterra' },
     description:
       'Automated competitor price tracking. AI monitors rival pricing across the web and suggests optimal price points to maximize margins while staying competitive. Set rules to auto-adjust pricing in real time.',
     bestFor: ['Competitive markets', 'Dynamic pricing'],
@@ -967,8 +967,8 @@ export const tools: Tool[] = [
     name: 'Triple Whale',
     slug: 'triple-whale',
     url: 'https://www.triplewhale.com',
-    pricing: { label: 'From $100/mo', type: 'paid' },
-    rating: { score: 4.5, source: 'G2' },
+    pricing: { label: 'Freemium / from $129/mo', type: 'freemium' },
+    rating: { score: 4.6, source: 'G2' },
     description:
       'E-commerce analytics dashboard that shows true ad performance. AI-powered attribution tracks every dollar from ad click to purchase, measures real ROAS, and identifies your most profitable marketing channels.',
     bestFor: ['DTC brands', 'Ad-heavy businesses'],
@@ -984,7 +984,7 @@ export const tools: Tool[] = [
     slug: 'toast',
     url: 'https://pos.toasttab.com',
     pricing: { label: 'Free tier + fees', type: 'freemium' },
-    rating: { score: 4.2, source: 'G2' },
+    rating: { score: 4.5, source: 'G2' },
     description:
       'The restaurant industry\u2019s leading platform. POS, online ordering, kitchen display, payroll, and marketing in one system. AI optimizes menu layout, predicts busy periods, and automates inventory tracking.',
     bestFor: ['Full-service restaurants', 'All-in-one'],
@@ -995,8 +995,8 @@ export const tools: Tool[] = [
     name: 'ChowNow',
     slug: 'chownow',
     url: 'https://www.chownow.com',
-    pricing: { label: 'From $149/mo', type: 'paid' },
-    rating: { score: 4.3, source: 'Capterra' },
+    pricing: { label: 'From $119/mo', type: 'paid' },
+    rating: { score: 4.8, source: 'Capterra' },
     description:
       'Commission-free online ordering for restaurants. Keep 100% of your revenue unlike DoorDash or Uber Eats. AI-powered marketing brings repeat orders, and your own branded app puts your restaurant on customers\u2019 home screens.',
     bestFor: ['Independent restaurants', 'Commission-free'],
@@ -1008,7 +1008,7 @@ export const tools: Tool[] = [
     slug: 'square-online',
     url: 'https://squareup.com/us/en/online-store',
     pricing: { label: 'Free tier', type: 'freemium' },
-    rating: { score: 4.4, source: 'G2' },
+    rating: { score: 4.3, source: 'G2' },
     description:
       'Free online ordering that syncs with Square POS. Customers order from your website for pickup or delivery. Menu updates sync automatically, and you get a simple delivery management dashboard.',
     bestFor: ['Small restaurants', 'Budget-friendly'],
@@ -1020,7 +1020,7 @@ export const tools: Tool[] = [
     slug: 'square-restaurants',
     url: 'https://squareup.com/us/en/restaurants',
     pricing: { label: 'Free tier', type: 'freemium' },
-    rating: { score: 4.4, source: 'G2' },
+    rating: { score: 4.2, source: 'G2' },
     description:
       'Restaurant POS with table management, kitchen tickets, and menu management. Free plan covers the basics. AI tracks your best and worst sellers, and coursing features keep the kitchen organized during rushes.',
     bestFor: ['Small restaurants', 'Caf\u00e9s'],
@@ -1032,7 +1032,7 @@ export const tools: Tool[] = [
     slug: 'lightspeed-restaurant',
     url: 'https://www.lightspeedhq.com/pos/restaurant',
     pricing: { label: 'From $69/mo', type: 'paid' },
-    rating: { score: 4.3, source: 'G2' },
+    rating: { score: 4.5, source: 'G2' },
     description:
       'Advanced restaurant POS with floor plan management, kitchen display system, and real-time menu analytics. AI identifies high-margin items and suggests menu placement strategies to boost average ticket size.',
     bestFor: ['Fine dining', 'Multi-location'],
@@ -1044,7 +1044,7 @@ export const tools: Tool[] = [
     slug: 'opentable',
     url: 'https://restaurant.opentable.com',
     pricing: { label: 'From $149/mo', type: 'paid' },
-    rating: { score: 4.6, source: 'G2' },
+    rating: { score: 4.7, source: 'Capterra' },
     description:
       'The most recognized reservation platform. AI optimizes table assignments, predicts no-shows, and manages waitlists. Your restaurant gets exposure to millions of diners searching the OpenTable network.',
     bestFor: ['Full-service', 'High volume'],
@@ -1055,8 +1055,8 @@ export const tools: Tool[] = [
     name: 'Resy',
     slug: 'resy',
     url: 'https://resy.com',
-    pricing: { label: 'Custom pricing', type: 'paid' },
-    rating: { score: 4.3, source: 'G2' },
+    pricing: { label: 'From $249/mo', type: 'paid' },
+    rating: { score: 4.5, source: 'Capterra' },
     description:
       'Premium reservation system favored by high-end restaurants. AI-powered table management, guest profiles with dining preferences, and CRM features that help you deliver personalized service to regulars.',
     bestFor: ['Upscale dining', 'Guest experience'],
@@ -1068,7 +1068,7 @@ export const tools: Tool[] = [
     slug: 'yelp-guest-manager',
     url: 'https://restaurants.yelp.com',
     pricing: { label: 'From $99/mo', type: 'paid' },
-    rating: { score: 4.1, source: 'Capterra' },
+    rating: { score: 4.5, source: 'Capterra' },
     description:
       'Waitlist and reservation management powered by Yelp\u2019s massive consumer network. Guests join your waitlist from Yelp, Google, or your website. AI predicts wait times accurately and sends automated text updates.',
     bestFor: ['Walk-in heavy', 'Yelp presence'],
@@ -1079,8 +1079,8 @@ export const tools: Tool[] = [
     name: 'MarketMan',
     slug: 'marketman',
     url: 'https://www.marketman.com',
-    pricing: { label: 'From $239/mo', type: 'paid' },
-    rating: { score: 4.6, source: 'Capterra' },
+    pricing: { label: 'From $127/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'Capterra' },
     description:
       'Restaurant inventory and food cost management. AI tracks ingredient costs in real time, alerts you when food costs spike, auto-generates purchase orders, and calculates actual vs. theoretical food cost per dish.',
     bestFor: ['Cost control', 'Multi-unit'],
@@ -1091,8 +1091,8 @@ export const tools: Tool[] = [
     name: 'BlueCart',
     slug: 'bluecart',
     url: 'https://www.bluecart.com',
-    pricing: { label: 'Custom pricing', type: 'paid' },
-    rating: { score: 4.6, source: 'Capterra' },
+    pricing: { label: 'From $10/mo', type: 'paid' },
+    rating: { score: 4.1, source: 'Capterra' },
     description:
       'Streamline ordering from your suppliers. AI tracks purchase patterns, compares vendor pricing, and automates reorders when stock runs low. Consolidates all supplier communication in one platform.',
     bestFor: ['Procurement', 'Multi-vendor'],
@@ -1115,8 +1115,8 @@ export const tools: Tool[] = [
     name: 'Popmenu',
     slug: 'popmenu',
     url: 'https://get.popmenu.com',
-    pricing: { label: 'Custom pricing', type: 'paid' },
-    rating: { score: 4.3, source: 'G2' },
+    pricing: { label: 'From $179/mo', type: 'paid' },
+    rating: { score: 4.7, source: 'G2' },
     description:
       'Restaurant marketing platform with AI-powered website, interactive menus, and automated social media posting. Guests can order directly from your menu, and AI writes personalized email campaigns based on dining history.',
     bestFor: ['Marketing-focused', 'Independent restaurants'],
@@ -1128,7 +1128,7 @@ export const tools: Tool[] = [
     slug: '7shifts',
     url: 'https://www.7shifts.com',
     pricing: { label: 'Free tier', type: 'freemium' },
-    rating: { score: 4.7, source: 'G2' },
+    rating: { score: 4.7, source: 'Capterra' },
     description:
       'Restaurant scheduling built around labor compliance. AI predicts staffing needs based on sales forecasts, auto-fills shifts when someone calls out, and keeps you under budget with real-time labor cost tracking.',
     bestFor: ['Restaurants', 'Labor compliance'],
@@ -1140,7 +1140,7 @@ export const tools: Tool[] = [
     slug: 'homebase',
     url: 'https://joinhomebase.com',
     pricing: { label: 'Free tier', type: 'freemium' },
-    rating: { score: 4.6, source: 'G2' },
+    rating: { score: 4.7, source: 'G2' },
     description:
       'Free employee scheduling, time tracking, and team communication. AI optimizes schedules based on availability and labor targets. Includes hiring tools, onboarding checklists, and basic HR features.',
     bestFor: ['Small restaurants', 'Free scheduling'],
@@ -1152,7 +1152,7 @@ export const tools: Tool[] = [
     slug: 'when-i-work',
     url: 'https://wheniwork.com',
     pricing: { label: 'From $2.50/user/mo', type: 'paid' },
-    rating: { score: 4.5, source: 'G2' },
+    rating: { score: 4.5, source: 'Capterra' },
     description:
       'Simple shift scheduling and time clock for hourly teams. Employees swap shifts from their phones, managers approve with one tap, and AI flags overtime before it happens. Clean interface with minimal learning curve.',
     bestFor: ['Hourly teams', 'Easy setup'],
@@ -1179,7 +1179,7 @@ export const tools: Tool[] = [
     name: 'Mindbody',
     slug: 'mindbody',
     url: 'https://www.mindbody.io',
-    pricing: { label: 'From $139/mo', type: 'paid' },
+    pricing: { label: 'From $99/mo', type: 'paid' },
     rating: { score: 4.0, source: 'Capterra' },
     description:
       'The leading platform for fitness studios, gyms, and wellness businesses. AI-powered class scheduling, membership management, and a consumer marketplace that brings new clients to your door.',
@@ -1191,8 +1191,8 @@ export const tools: Tool[] = [
     name: 'SimplePractice',
     slug: 'simplepractice',
     url: 'https://www.simplepractice.com',
-    pricing: { label: 'From $29/mo', type: 'paid' },
-    rating: { score: 4.6, source: 'G2' },
+    pricing: { label: 'From $49/mo', type: 'paid' },
+    rating: { score: 4.6, source: 'Capterra' },
     description:
       'All-in-one practice management for therapists, counselors, and private practitioners. Online booking, HIPAA-compliant telehealth, insurance billing, and client documentation in a clean, intuitive interface.',
     bestFor: ['Therapists', 'Private practice'],
@@ -1203,7 +1203,7 @@ export const tools: Tool[] = [
     name: 'Weave',
     slug: 'weave',
     url: 'https://www.getweave.com',
-    pricing: { label: 'Custom pricing', type: 'paid' },
+    pricing: { label: 'From $249/mo', type: 'paid' },
     rating: { score: 4.5, source: 'G2' },
     description:
       'Patient communication platform that shows who\u2019s calling before you pick up. AI sends appointment reminders, handles two-way texting, collects payments via text, and automates review requests after visits.',
@@ -1227,8 +1227,8 @@ export const tools: Tool[] = [
     name: 'Tebra',
     slug: 'tebra',
     url: 'https://www.tebra.com',
-    pricing: { label: 'From $125/provider/mo', type: 'paid' },
-    rating: { score: 4.0, source: 'Capterra' },
+    pricing: { label: 'From $99/provider/mo', type: 'paid' },
+    rating: { score: 4.1, source: 'G2' },
     description:
       'Medical billing and practice management (formerly Kareo). AI automates claim submissions, flags coding errors before they\u2019re rejected, and tracks every dollar from appointment to payment. Built for independent practices.',
     bestFor: ['Independent practices', 'Medical billing'],
@@ -1240,7 +1240,7 @@ export const tools: Tool[] = [
     slug: 'athenahealth',
     url: 'https://www.athenahealth.com',
     pricing: { label: 'Percentage of collections', type: 'paid' },
-    rating: { score: 4.0, source: 'Capterra' },
+    rating: { score: 3.8, source: 'Capterra' },
     description:
       'Cloud-based billing, EHR, and patient engagement. AI-powered claims management handles denials automatically, and the billing rules engine catches errors before submission. You only pay a percentage of what they collect.',
     bestFor: ['Medical practices', 'Revenue cycle'],
@@ -1252,7 +1252,7 @@ export const tools: Tool[] = [
     slug: 'doxyme',
     url: 'https://doxy.me',
     pricing: { label: 'Free tier', type: 'freemium' },
-    rating: { score: 4.5, source: 'G2' },
+    rating: { score: 4.6, source: 'G2' },
     description:
       'Free, HIPAA-compliant telehealth that works in any browser \u2014 no downloads for patients. Start a video visit with a simple link. Includes a virtual waiting room, screen sharing, and session notes.',
     bestFor: ['All providers', 'Free telehealth'],
@@ -1263,7 +1263,7 @@ export const tools: Tool[] = [
     name: 'Birdeye',
     slug: 'birdeye',
     url: 'https://www.birdeye.com',
-    pricing: { label: 'Custom pricing', type: 'paid' },
+    pricing: { label: 'From $299/mo', type: 'paid' },
     rating: { score: 4.7, source: 'G2' },
     description:
       'Reputation management built for healthcare. AI generates review requests via text after visits, monitors 200+ review sites, and crafts HIPAA-compliant response suggestions for every review \u2014 good or bad.',
@@ -1275,8 +1275,8 @@ export const tools: Tool[] = [
     name: 'DrChrono',
     slug: 'drchrono',
     url: 'https://www.drchrono.com',
-    pricing: { label: 'From $199/mo', type: 'paid' },
-    rating: { score: 4.0, source: 'G2' },
+    pricing: { label: 'From $299/provider/mo', type: 'paid' },
+    rating: { score: 4.3, source: 'G2' },
     description:
       'iPad-first EHR and medical billing with AI-powered speech-to-text charting. Dictate clinical notes, auto-generate billing codes, and manage patient records from an intuitive touch interface.',
     bestFor: ['Small practices', 'iPad-based charting'],
@@ -1299,7 +1299,7 @@ export const tools: Tool[] = [
     name: 'ChiroTouch',
     slug: 'chirotouch',
     url: 'https://www.chirotouch.com',
-    pricing: { label: 'Custom pricing', type: 'paid' },
+    pricing: { label: 'From $159/mo', type: 'paid' },
     rating: { score: 4.0, source: 'Capterra' },
     description:
       'EHR and practice management built for chiropractors. AI-assisted SOAP notes, compliance-ready documentation, and built-in billing. Designed around the chiropractic workflow from intake to adjustment to billing.',
