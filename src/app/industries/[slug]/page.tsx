@@ -24,12 +24,23 @@ export function generateMetadata({
 }): Metadata {
   const industry = getIndustryBySlug(params.slug);
   if (!industry) return {};
+  const pageUrl = `https://aistartupguide.com/industries/${industry.slug}`;
   return {
     title: `AI Tools for ${industry.name} — AIStartupGuide.com`,
     description: industry.metaDescription,
     openGraph: {
-      title: `AI Tools for ${industry.name}`,
+      title: `AI Tools for ${industry.name} — AIStartupGuide.com`,
       description: industry.metaDescription,
+      type: 'website',
+      url: pageUrl,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `AI Tools for ${industry.name} — AIStartupGuide.com`,
+      description: industry.metaDescription,
+    },
+    alternates: {
+      canonical: pageUrl,
     },
   };
 }
@@ -46,6 +57,24 @@ export default function IndustryPage({
     .map(getToolBySlug)
     .filter((t): t is Tool => !!t);
 
+  const webPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: `AI Tools for ${industry.name}`,
+    description: industry.metaDescription,
+    url: `https://aistartupguide.com/industries/${industry.slug}`,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'AIStartupGuide.com',
+      url: 'https://aistartupguide.com',
+    },
+    about: {
+      '@type': 'Thing',
+      name: industry.name,
+    },
+    dateModified: '2026-02-19',
+  };
+
   return (
     <div
       style={
@@ -56,6 +85,11 @@ export default function IndustryPage({
         } as React.CSSProperties
       }
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+
       {/* Breadcrumb */}
       <Breadcrumb industryName={industry.name} />
 

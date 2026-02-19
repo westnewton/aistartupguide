@@ -4,7 +4,23 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Book a 1-on-1 Setup Session — AIStartupGuide.com',
   description:
-    'Need hands-on help getting an AI tool set up for your business? We offer 1-on-1 sessions at $150/hour where we walk you through everything.',
+    'Get hands-on help setting up AI tools for your business. 1-on-1 sessions at $150/hour — we walk you through everything.',
+  openGraph: {
+    title: 'Book a 1-on-1 Setup Session — AIStartupGuide.com',
+    description:
+      'Get hands-on help setting up AI tools for your business. 1-on-1 sessions at $150/hour — we walk you through everything.',
+    type: 'website',
+    url: 'https://aistartupguide.com/book-a-session',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Book a 1-on-1 Setup Session — AIStartupGuide.com',
+    description:
+      'Get hands-on help setting up AI tools for your business. 1-on-1 sessions at $150/hour — we walk you through everything.',
+  },
+  alternates: {
+    canonical: 'https://aistartupguide.com/book-a-session',
+  },
 };
 
 export default function BookASessionPage() {

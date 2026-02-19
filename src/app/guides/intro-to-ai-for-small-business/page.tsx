@@ -5,21 +5,65 @@ import NewsletterCTA from '@/components/NewsletterCTA';
 import FadeUp from '@/components/FadeUp';
 import './guide.css';
 
+const pageUrl = 'https://aistartupguide.com/guides/intro-to-ai-for-small-business';
+const pageDescription =
+  'What AI actually does, what it costs, and how to start using it today. A plain-English guide for small business owners — no jargon, no hype.';
+
 export const metadata: Metadata = {
   title: "A Small Business Owner's Guide to AI — AIStartupGuide.com",
-  description:
-    'Everything you need to know about AI as a small business owner — what it actually does, what it costs, and how to start using it today. No jargon, no hype, just practical advice.',
+  description: pageDescription,
   openGraph: {
     title: "A Small Business Owner's Guide to AI — AIStartupGuide.com",
-    description:
-      'Everything you need to know about AI as a small business owner — what it actually does, what it costs, and how to start using it today. No jargon, no hype, just practical advice.',
+    description: pageDescription,
     type: 'article',
+    url: pageUrl,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "A Small Business Owner's Guide to AI — AIStartupGuide.com",
+    description: pageDescription,
+  },
+  alternates: {
+    canonical: pageUrl,
+  },
+};
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: "A Small Business Owner's Guide to AI",
+  description: pageDescription,
+  url: pageUrl,
+  datePublished: '2026-02-01',
+  dateModified: '2026-02-19',
+  author: {
+    '@type': 'Organization',
+    name: 'AIStartupGuide.com',
+    url: 'https://aistartupguide.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'AIStartupGuide.com',
+    url: 'https://aistartupguide.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://aistartupguide.com/og-default.png',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': pageUrl,
   },
 };
 
 export default function AIIntroGuidePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+
       <Breadcrumb
         items={[
           { label: 'Home', href: '/' },
