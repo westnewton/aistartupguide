@@ -169,9 +169,7 @@ export default function HomePage() {
         </FadeUp>
         <div className="industry-grid">
           {industries.map((industry) => (
-            <FadeUp key={industry.slug}>
-              <IndustryCard {...industry} />
-            </FadeUp>
+            <IndustryCard key={industry.slug} {...industry} />
           ))}
         </div>
       </section>

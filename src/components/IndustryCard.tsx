@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface IndustryCardProps {
@@ -8,7 +11,6 @@ interface IndustryCardProps {
   description: string;
   toolCount: number;
   bizCount: string;
-  className?: string;
 }
 
 export default function IndustryCard({
@@ -19,12 +21,33 @@ export default function IndustryCard({
   description,
   toolCount,
   bizCount,
-  className = '',
 }: IndustryCardProps) {
+  const ref = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Link
+      ref={ref}
       href={`/industries/${slug}`}
-      className={`industry-card ${colorClass}${className ? ` ${className}` : ''}`}
+      className={`industry-card ${colorClass} fade-up`}
     >
       <div className="industry-icon">{emoji}</div>
       <h3>{name}</h3>
