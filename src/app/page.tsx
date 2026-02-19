@@ -34,7 +34,7 @@ const industries = [
     emoji: '🔨',
     name: 'Construction & Trades',
     description: 'General contractors, electricians, plumbers, HVAC, roofers',
-    toolCount: 12,
+    toolCount: 18,
     bizCount: '3.6M businesses in the U.S.',
   },
   {
@@ -52,7 +52,7 @@ const industries = [
     emoji: '🏠',
     name: 'Real Estate',
     description: 'Agents, brokerages, property management, inspections',
-    toolCount: 15,
+    toolCount: 18,
     bizCount: '3.3M businesses in the U.S.',
   },
   {
@@ -88,7 +88,7 @@ const industries = [
     emoji: '✂️',
     name: 'Home & Personal Services',
     description: 'Cleaning, landscaping, salons, pet care, auto repair',
-    toolCount: 10,
+    toolCount: 18,
     bizCount: 'Fastest-growing segment',
   },
 ];
