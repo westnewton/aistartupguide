@@ -47,7 +47,7 @@ const articleJsonLd = {
     url: 'https://aistartupguide.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://aistartupguide.com/og-default.png',
+      url: 'https://aistartupguide.com/og-image.png',
     },
   },
   mainEntityOfPage: {
