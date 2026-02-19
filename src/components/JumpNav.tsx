@@ -37,7 +37,7 @@ export default function JumpNav({ categories }: JumpNavProps) {
   };
 
   return (
-    <div className="jump-nav fade-up">
+    <div className="jump-nav">
       <div className="jump-nav-inner">
         {categories.map((cat) => (
           <a
