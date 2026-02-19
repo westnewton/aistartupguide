@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#faf8f5"/>
+  
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="#c45d3e"/>
+  
+  <!-- Subtle bottom-right glow -->
+  <circle cx="1100" cy="530" r="300" fill="#c45d3e" opacity="0.06"/>
+  
+  <!-- Logo -->
+  <text x="80" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="28" fill="#1a1a1a" font-weight="400">AI<tspan fill="#c45d3e">Startup</tspan>Guide</text>
+  
+  <!-- Main headline -->
+  <text x="80" y="260" font-family="Georgia, 'Times New Roman', serif" font-size="64" fill="#1a1a1a" font-weight="400" letter-spacing="-2">Find the right</text>
+  <text x="80" y="340" font-family="Georgia, 'Times New Roman', serif" font-size="64" fill="#c45d3e" font-style="italic" font-weight="400" letter-spacing="-2">AI tools</text>
+  <text x="303" y="340" font-family="Georgia, 'Times New Roman', serif" font-size="64" fill="#1a1a1a" font-weight="400" letter-spacing="-2"> for your business</text>
+  
+  <!-- Subtext -->
+  <text x="80" y="410" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#7a7568">Tested and curated for small businesses — organized by industry,</text>
+  <text x="80" y="444" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#7a7568">explained in plain English.</text>
+  
+  <!-- Stats bar -->
+  <line x1="80" y1="490" x2="700" y2="490" stroke="#e0dbd2" stroke-width="1"/>
+  <text x="80" y="540" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#1a1a1a">120+</text>
+  <text x="80" y="570" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#7a7568">Tools Reviewed</text>
+  
+  <text x="260" y="540" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#1a1a1a">8</text>
+  <text x="260" y="570" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#7a7568">Industries</text>
+  
+  <text x="400" y="540" font-family="Georgia, 'Times New Roman', serif" font-size="32" fill="#1a1a1a">100%</text>
+  <text x="400" y="570" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#7a7568">Independent</text>
+  
+  <!-- URL -->
+  <text x="1120" y="580" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#7a7568" text-anchor="end">aistartupguide.com</text>
+</svg>
