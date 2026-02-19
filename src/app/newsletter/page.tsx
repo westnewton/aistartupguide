@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import NewsletterCTA from '@/components/NewsletterCTA';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Newsletter — AIStartupGuide.com',
@@ -10,19 +9,11 @@ export const metadata: Metadata = {
 
 export default function NewsletterPage() {
   return (
-    <>
-      <section style={{ textAlign: 'center', paddingTop: 140, paddingBottom: 0 }}>
-        <span className="section-label">Stay Ahead</span>
-        <h1 className="section-title">The AI Startup Guide Newsletter</h1>
-        <p className="section-sub" style={{ margin: '0 auto 32px' }}>
-          A weekly email with new tool discoveries, industry-specific tips, and
-          no-BS advice for small business owners adopting AI.
-        </p>
-        <Link href="/" className="btn-secondary">
-          Back to Home
-        </Link>
-      </section>
-      <NewsletterCTA />
-    </>
+    <div style={{ paddingTop: 80 }}>
+      <NewsletterCTA
+        headline="Get the Best AI Tools in Your Inbox"
+        subtext="A weekly email with new tool discoveries, industry-specific tips, and practical advice for small business owners adopting AI. No spam, unsubscribe anytime."
+      />
+    </div>
   );
 }
