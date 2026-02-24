@@ -1,4 +1,5 @@
 import { industries } from '@/data/industries';
+import { getAllPosts } from '@/lib/blog';
 
 const siteUrl = 'https://aistartupguide.com';
 
@@ -46,6 +47,12 @@ export function GET() {
       lastModified: '2026-02-20',
       changeFrequency: 'weekly',
       priority: 0.9,
+    })),
+    ...getAllPosts().map((post) => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified: post.date || '2026-02-20',
+      changeFrequency: 'monthly',
+      priority: 0.7,
     })),
     {
       url: `${siteUrl}/blog`,
