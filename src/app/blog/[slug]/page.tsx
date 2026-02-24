@@ -4,6 +4,8 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { getAllPosts, getPostBySlug } from '@/lib/blog';
+import { parseFAQsFromMarkdown } from '@/lib/parse-faqs';
+import BlogStructuredData from '@/components/BlogStructuredData';
 import NewsletterCTA from '@/components/NewsletterCTA';
 import Breadcrumb from '@/components/Breadcrumb';
 import './blog-post.css';
@@ -50,29 +52,19 @@ export default function BlogPostPage({
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    author: {
-      '@type': 'Person',
-      name: post.author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'AIStartupGuide.com',
-      url: 'https://aistartupguide.com',
-    },
-    url: `https://aistartupguide.com/blog/${post.slug}`,
-  };
+  const faqs = parseFAQsFromMarkdown(post.content);
 
   return (
     <div className="blog-post-page">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      <BlogStructuredData
+        title={post.title}
+        description={post.description}
+        date={post.date}
+        author={post.author}
+        slug={post.slug}
+        industry={post.industry}
+        industrySlug={post.industrySlug}
+        faqs={faqs}
       />
 
       <Breadcrumb
