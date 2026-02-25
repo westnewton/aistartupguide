@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     icon: '/favicon.svg',
     apple: '/apple-touch-icon.png',
   },
+  manifest: '/site.webmanifest',
   openGraph: {
     title: 'AIStartupGuide.com — Find the Right AI Tools for Your Business',
     description:
